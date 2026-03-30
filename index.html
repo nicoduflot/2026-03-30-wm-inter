@@ -30,7 +30,7 @@
             </p>
             <ul>
                 <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
-                <li><a href=""></a></li>
+                <li><a href="#balises-de-modification-de-texte">Balises de modification de texte</a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
@@ -297,6 +297,51 @@
                             <td>cellule</td>
                         </tr>
                     </table>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="balises-de-modification-de-texte">Balises de modification de texte</h3>
+                </header>
+                <article>
+                    <h4>Taille, police et couleur du texte</h4>
+                    <p>
+                        Dans les premières version HTML, il existait la balise <code>&lt;font&gt;</code> qui permettait de changer <font size="4" face="Impact" color="darkred">la taille (size), la police (face) et la couleur d'écriture (color)</font> d'une portion de texte. Mais cette balise est dépréciée (plus dans les norme HTML) elle est pour l'instant toujours interprétée par les navigateurs. Il sera préférable de créer des classes CSS que l'on appliquera ponctuellement à l'aide d'une balise span.
+                    </p>
+                    <style>
+                        .danger{
+                            font-size: 18px;
+                            font-family: Impact;
+                            color: darkred;
+                        }
+                    </style>
+                    <p>
+                        On utilise donc une balise <code>&lt;span&gt;</code> associée à une classe pour <span class="danger">reproduire les effets d'une balise <code>&lt;font&gt;</code></span>
+                    </p>
+                    <h4>Les gras et l'italique</h4>
+                    <p>
+                        Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui
+                        ne
+                        servent qu'à attirer l'attention du lecteur sont<code>&lt;b&gt;</code> <b>pour le gras</b> et <code>&lt;i&gt;</code>
+                        <i>pour
+                            l'italique</i>.<br />
+                        Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
+                        référencement, on utilisera <code>&lt;strong&gt;</code> <strong>pour le gras</strong> et l'importance
+                        sémantique
+                        sur la force du terme et <code>&lt;em&gt;</code> <em>pour l'italique</em> et ajouter de l'emphase à la sémantique du terme.
+                    </p>
+                    <h4>D'autres mise en forme de texte</h4>
+                    <p>
+                        A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour
+                        cela qu'il est toujours possible de <u>souligner</u>, <s>de biffer</s> ou de <mark>surligner au fluo du texte</mark>.<br />
+                        On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un
+                        hyperlien, et ils pourraient pense qu'il s'agit d'un lien cassé.
+                    </p>
+                    <p>
+                        Une surface de 45m<sup>2</sup><br />
+                        Un volume de 3m<sup>3</sup><br />
+                        Acide sulfurique en oxido-réduction : H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>&#x21CC;
+                    </p>
                 </article>
             </section>
         </section>
