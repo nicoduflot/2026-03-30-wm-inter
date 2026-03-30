@@ -189,34 +189,34 @@
                 </article>
                 <article>
                     <h4>Les tableaux</h4>
-                    <table>
+                    <table border="1" cellspacing="0">
                         <caption>Exemple de tableau complet</caption>
                         <thead>
                             <tr>
-                                <th>Entête n°01</th>
-                                <th>Entête n°02</th>
-                                <th>Entête n°03</th>
-                                <th>Entête n°04</th>
-                                <th>Entête n°05</th>
+                                <th role="columnheader">Entête n°01</th>
+                                <th role="columnheader">Entête n°02</th>
+                                <th role="columnheader">Entête n°03</th>
+                                <th role="columnheader">Entête n°04</th>
+                                <th role="columnheader">Entête n°05</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>01</td>
+                                <td colspan="2">01</td>
+                                <!-- <td>02</td> -->
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">01</td>
                                 <td>02</td>
                                 <td>03</td>
                                 <td>04</td>
                                 <td>05</td>
                             </tr>
                             <tr>
-                                <td>01</td>
-                                <td>02</td>
-                                <td>03</td>
-                                <td>04</td>
-                                <td>05</td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
+                                <!--<td>01</td>-->
                                 <td>02</td>
                                 <td>03</td>
                                 <td>04</td>
@@ -239,13 +239,58 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Pied n°01</th>
-                                <th>Pied n°02</th>
-                                <th>Pied n°03</th>
-                                <th>Pied n°04</th>
-                                <th>Pied n°05</th>
+                                <th role="columnheader">Pied n°01</th>
+                                <th role="columnheader">Pied n°02</th>
+                                <th role="columnheader">Pied n°03</th>
+                                <th role="columnheader">Pied n°04</th>
+                                <th role="columnheader">Pied n°05</th>
                             </tr>
                         </tfoot>
+                    </table>
+                    <p>
+                        Tableau plus simple
+                    </p>
+                    <table>
+                        <tr>
+                            <th>01</th>
+                            <th>02</th>
+                            <th>03</th>
+                            <th>04</th>
+                            <th>05</th>
+                        </tr>
+                        <colgroup>
+                            <col />
+                            <col span="2" style="background-color: orange;" />
+                            <col span="2" style="background-color: lightblue;" />
+                        </colgroup>
+                        <tr>
+                            <th role="rowheader">1</th>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                        </tr>
+                        <tr>
+                            <th role="rowheader">2</th>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                        </tr>
+                        <tr>
+                            <th role="rowheader">3</th>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                        </tr>
+                        <tr role="rowheader">
+                            <th>4</th>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                            <td>cellule</td>
+                        </tr>
                     </table>
                 </article>
             </section>
