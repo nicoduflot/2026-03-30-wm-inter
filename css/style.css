@@ -1,0 +1,132 @@
+/*
+Commentaire en CSS
+
+CSS => Cascading Style Sheets (Feuilles de style en cascade)
+
+La cascade 
+
+Principe de base : Si on déclare du CSS pour un élément, la quasi-totalité des éléments à l'intérieur de celui-ci appliqueront ce style par HÉRITAGE
+
+En revanhce, si un style est appliqué en particulier à un des éléments à l'intérieur, ce style praticulier ira surcharger l'héritage
+
+Les sélecteurs CSS
+
+Pour appliquer des propriétés CSS (du style) sur des éléments et les éléments à l'intérieur, il faut indiquer au navigateurs quels sont es élément en utilsants un Sélecteur CSS.
+
+# => sélécteur d'élément avec un id défini
+    ATTENTION : Les id d'une page doivent être UNIQUES
+    Ex : <h3 id="mise-a-zero-du-css">Mise à zéro du CSS</h3>
+
+    Sélécteur : 
+        #mise-a-zero-du-css{
+            -- CSS
+        }
+
+. => sélécteur par nom de classe
+    Ex : <span class="danger">code</span>
+    Ex : <span class="danger toto">code</span>
+
+    Sélécteur : 
+    .danger{
+        -- CSS
+    }
+
+balise => Sélécteur par nom de balise
+
+    Ex : <h1>Titre</h1>
+
+    Sélécteur : 
+    h1{
+        -- CSS
+    }
+
+
+En réalité : 
+on mélange TOUT !
+
+Sélecteur d'un élément particulier avec une classe particulière
+
+<span class="danger"></span>
+<button class="danger"></span>
+
+.danger{
+    color: darkred;
+}
+
+span.danger{
+    font-weight: bold;
+}
+
+button.danger{
+    border-color: darkred;
+}
+
+un élément ayant une classe particulière dans un élément particulier
+
+Désignation par "filiation" large
+
+article .danger{
+    -- CSS
+}
+
+<article>
+    <span class="danger">toto(article .danger)</span>
+    <p class="danger">
+        Applique article .danger
+    </p>
+    <div>
+        <p>
+            <b class="danger">toto (article .danger)</b>
+        </p>
+    </div>
+</article>
+
+Désignation par filiation direct
+
+article > .danger{
+    ---
+}
+
+seuls les élément directement enfant (1er degré) d'un article qui possèdent au moins la classe danger seront impacté
+
+<article>
+    <span class="danger">toto(article > .danger)</span>
+    <p class="danger">
+        Applique article > .danger
+    </p>
+    <div>
+        <p>
+            <b class="danger">toto (n'applique pas une div et un p entre lui et article)</b>
+        </p>
+    </div>
+</article>
+
+Sélecteur "magique"
+
+* => n'importe quelle suite de caractère donc tous les éléments de la page
+
+section * => tous les éléments, quelque soit le degré, dans un article
+
+section > * => tous les éléments, du premier degré, dans un article
+
+Pseudo-sélecteurs
+
+before et after : c'est l'espace entre la marge intérieur d'un élément et sont contenu.
+
+q::before, q::after{
+    font-weight: bold;
+}
+
+Pseudo-classes
+
+Certains éléments changent "d'état" dans leurs utilisation, par exemple, quand la souris passe "au dessus" (survol), un élément est dans l'état "survolé" :hover
+
+q:hover{
+    color: red;
+    background-color: black;
+    cursor: pointer;
+}
+
+quand un élément q est survolé, la police de caractère devient rouge et la couleur de fond passe au noir.
+
+*/
