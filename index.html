@@ -2,8 +2,8 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction au HTML - CSS | Formation HTML - CSS</title>
 </head>
 
@@ -29,7 +29,7 @@
                 <span>Table des matières</span>
             </p>
             <ul>
-                <li><a href=""></a></li>
+                <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
                 <li><a href=""></a></li>
@@ -37,6 +37,219 @@
                 <li><a href=""></a></li>
             </ul>
         </aside>
+        <section>
+            <header>
+                <h2>Bases en HTML</h2>
+            </header>
+            <section>
+                <header>
+                    <h3 id="balises-de-contenu-de-texte">Balises de contenu de texte</h3>
+                </header>
+                <article>
+                    <h4>Les paragraphes</h4>
+                    <p>
+                        Les paragraphes séparent les blocs de texte sur la verticale,mais on a parfois besoin d'un
+                        retour chariot au sein d'un paragraphe : <br />
+                        Le paragraphe s'écrit avec la balise <code>&lt;p&gt;</code>. <br />
+                        Le retour chariot se fait avec <code>&lt;br /&gt;</code>
+                    </p>
+                    <h5>Exemple pragraphe et retour chariot</h5>
+                    <p>
+                        Mon petit garçon
+                    </p>
+                    <p>
+                        n'est pas à l'école<br /> donc je dois télétravailler
+                    </p>
+                    <p>
+                        Les paragraphes possèdent en haut et en bas des marge extérieures, de qui permet qu'il ne soient
+                        pas collé verticalement.
+                    </p>
+                    <p>
+                        Comme se sont des marge extérieure, elles se chevauches quand elles se suivent.
+                    </p>
+                </article>
+                <article>
+                    <h4>Les liste non-ordonnée</h4>
+                    <h5>Les listes à un niveau</h5>
+                    <ul>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ul>
+                    <h5>Listes à plusieurs niveaux</h5>
+                    <ul>
+                        <li>Élément de liste</li>
+                        <li>
+                            Élément de liste
+                            <ul>
+                                <li>Élément de sous-liste</li>
+                                <li>
+                                    Élément de sous-liste
+                                    <ul>
+                                        <li>Élément de sous-sous-liste</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ul>
+                </article>
+                <article>
+                    <h4>Listes ordonnées</h4>
+                    <h5>Les listes à un niveau</h5>
+                    <ol>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <ol type="I">
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <ol type="a">
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <h5>Listes à plusieurs niveaux</h5>
+                    <ol>
+                        <li>Élément de liste</li>
+                        <li>
+                            Élément de liste
+                            <ol type="A">
+                                <li>Élément de sous-liste</li>
+                                <li>
+                                    Élément de sous-liste
+                                    <ol type="i">
+                                        <li>Élément de sous-sous-liste</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <p>
+                        Si vous avez besoin d'interrompre l'affichage d'une liste pour intervenir, et que vous devez reprendre cette liste à la numlérotation :
+                    </p>
+                    <ol start="5">
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <p>
+                        Il est aussi possible d'afficher la numérotation à rebours avec l'attribut reversed
+                    </p>
+                </article>
+                <article>
+                    <h4>Les listes "descriptives"</h4>
+                    <dl>
+                        <dt>Terme a décrire</dt>
+                        <dd>Description du terme</dd>
+                        <dt>Terme a décrire</dt>
+                        <dd>Description du terme</dd>
+                    </dl>
+                    <dl>
+                        <dt>Paris</dt>
+                        <dd>Capitale de la France</dd>
+
+                        <dt>Lille</dt>
+                        <dd>Meilleure ville de France</dd>
+                        
+                        <dt>Nantes</dt>
+                        <dd>Ils veulent tous être Bretons</dd>
+
+                    </dl>
+                </article>
+                <article>
+                    <h4>Les citations</h4>
+                    <blockquote>
+                        <p>
+                            La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu en ajoutant des marges extérieures à gauche et à droite
+                        </p>
+                    </blockquote>
+                    <p>
+                        Pour afficher une citation complète (source, auteur·ice, etc.) on va la complèter avec une série de balises liées aux citations
+                    </p>
+                    <blockquote>
+                        <p>
+                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                        </p>
+                        <p>
+                            <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997 (ISBN
+                                2-84172-045-4), p. 173</cite>
+                        </p>
+                    </blockquote>
+                </article>
+                <article>
+                    <h4>Les tableaux</h4>
+                    <table>
+                        <caption>Exemple de tableau complet</caption>
+                        <thead>
+                            <tr>
+                                <th>Entête n°01</th>
+                                <th>Entête n°02</th>
+                                <th>Entête n°03</th>
+                                <th>Entête n°04</th>
+                                <th>Entête n°05</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Pied n°01</th>
+                                <th>Pied n°02</th>
+                                <th>Pied n°03</th>
+                                <th>Pied n°04</th>
+                                <th>Pied n°05</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </article>
+            </section>
+        </section>
     </main>
     <footer>
         <div>&copy; DAWAN - MARS 2026</div>
