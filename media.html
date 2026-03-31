@@ -32,7 +32,7 @@
         <div>
             <ul>
                 <li><a href="./" title="Introduction au HTML - CSS">Accueil</a></li>
-                <li><a href="./media.html" title="Les media en HTML - CSS">Media</a></li>
+                <li><a href="./media.html" target="_self" title="Les media en HTML - CSS">Media</a></li>
                 <li><a href="./contact.html" title="Les formulaires en HTML - CSS">Contact</a></li>
                 <li><a href="./animations.html" title="Les animations HTML - CSS">Animations</a></li>
                 <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap">Bootstrap</a></li>
@@ -72,10 +72,13 @@
                     <a href="media-embarques">Media embarqués</a>
                     <ul>
                         <li>
-                            <a href="#audio-embarquee">L'audio embarquée</a>
+                            <a href="#images-embarquees">Les images embarquées</a>
                         </li>
                         <li>
                             <a href="#video-embarquee">La vidéo embarquée</a>
+                        </li>
+                        <li>
+                            <a href="#audio-embarquee">L'audio embarquée</a>
                         </li>
                     </ul>
                 </li>
@@ -220,10 +223,86 @@
                 <p>
                     Exercice : <br />
                     recréer la figure vidéo avec le lecteur pour les deux vidéos nommées
-                    "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". 
+                    "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm".
                     (utilisez <code>source</code> )<br />
                     Utilisez l'id "bunny" pour l'élément vidéo.
                 </p>
+                <figure>
+                    <video id="bunny" class="img-fluid" controls muted>
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                    </video>
+                    <figcaption>
+                        <button onclick="playMedia('bunny')">Lire</button>
+                        <button onclick="pauseMedia('bunny')">Pause</button>
+                        <button onclick="stopMedia('bunny')">Stop</button>
+                    </figcaption>
+                </figure>
+            </section>
+            <section>
+                <header>
+                    <h2 id="media-embarques">Media embarqués</h2>
+                </header>
+                <article>
+                    <h3 id="images-embarquees">Les images embarquées</h3>
+                    <p>
+                        "embarquer" un média signifie que le media n'est pas hébergé sur le site que l'on visite mais
+                        sur un site ou hébergement spécialisé pour ce type de media.
+                    </p>
+                    <p>
+                        Pour les images, certains fora ou réseaux sociaux ne proposent pas directement le téléversement
+                        de fichiers dans les publications des utilisateurs, alors on se tourne vers un hébergeur
+                        multimédia sur lequel on téléverse les media que l'on "embarque" ensuite sur les publications
+                        précédemment citées.
+                    </p>
+                    <figure>
+                        <a data-flickr-embed="true"
+                            href="https://www.flickr.com/photos/garry_rocks/55027610073/in/feed-90595800-1767727596-1-72157721792371475"
+                            title="Warmachine Cygnar"><img
+                                src="https://live.staticflickr.com/65535/55027610073_7a69e95c27_b.jpg"
+                                alt="Warmachine Cygnar" class="img-fluid" /></a>
+                        <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        <figcaption>
+                            Une image embarquée depuis flickr
+                        </figcaption>
+                    </figure>
+                    <figure class="media-legend">
+                        <div>
+                            <img src="https://live.staticflickr.com/65535/55027610073_7a69e95c27_b.jpg"
+                                alt="Warmachine Cygnar" class="img-fluid" />
+                        </div>
+                    </figure>
+                </article>
+                <article>
+                    <h3 id="video-embarquee">Vidéo embarqué</h3>
+                    <h4>L'iframe</h4>
+                    <p>
+                        L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est possible d'inserrer d'autres types de fichiers, par exemple des pdf ou  directement des fichiers vidéos, sons, etc.
+                    </p>
+                    <p>
+                        L'iframe avait un ancètre, la combinaison frameset et frame.
+                    </p>
+                    <p>
+                        Exemple de <a href="./frameset.html" target="_blank">frameset</a>
+                    </p>
+                    <p>
+                        Exemple d'iframe
+                    </p>
+                    <ul>
+                        <li><a href="./documents/PP3.pdf" target="documents">PP3</a></li>
+                        <li><a href="./documents/books.xml" target="documents">books.xml</a></li>
+                        <li><a href="./documents/uxpin_web_ui_design_for_the_human_eye_1.pdf" target="documents">Web design for human eye</a></li>
+                    </ul>
+                    <iframe name="documents" src="./documents/PP3.pdf" width="100%" height="400">
+                        <p>
+                            Votre navigateur ne supporte les cdres de page (iframe)
+                        </p>
+                    </iframe>
+                    <h4></h4>
+                </article>
+                <article>
+
+                </article>
             </section>
         </section>
     </main>
