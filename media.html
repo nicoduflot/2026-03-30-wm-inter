@@ -36,6 +36,17 @@
             <ul>
                 <li>
                     <a href="#les-images">Les images</a>
+                    <ul>
+                        <li>
+                            <a href="#balise-img">La balise <code>img</code></a>
+                        </li>
+                        <li>
+                            <a href="#la-balise-figure">La balise <code>figure</code></a>
+                        </li>
+                        <li>
+                            <a href="#la-balise-picture">La balise <code>picture</code></a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </aside>
@@ -77,6 +88,44 @@
                     <p>
                         Il est possible d'imposer une hauteur et une largeur à une image, mais si on ne respecte pas l'homotétie (rapport hauteur / largeur), elle sera déformée.
                     </p>
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="vignette-100" />
+                    <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" class="vignette-100" />
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="miniature-100" />
+                    <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" class="miniature-100" />
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="avatar-100" />
+                    <img src="./images/pip-boy-boy.png" class="avatar-100 obj-pos-top" />
+                </article>
+                <article>
+                    <h4 id="la-balise-figure">La balise <code>figure</code></h4>
+                    <p>
+                        Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une légende, avec la balise figcaption.
+                    </p>
+                    <figure class="media-legend">
+                        <div>
+                            <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png" class="img-fluid" alt="" />
+                            <figcaption>
+                                Pochette d'un album de musique Synthwave. Texte supplémentaire.
+                            </figcaption>
+                        </div>
+                    </figure>
+                </article>
+                <article>
+                    <h4 id="la-balise-picture">La balise picture</h4>
+                    <p>
+                        La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
+                    </p>
+                    <figure class="media-legend">
+                        <div>
+                            <picture>
+                                <source srcset="./images/doc-signal-394w.png" media="(min-width: 500px)" />
+                                <source srcset="./images/doc-signal-250w.png" media="(min-width: 400px)" />
+                                <img src="./images/doc-signal-200w.png" alt="" class="img-fluid" />
+                            </picture>
+                            <figcaption>
+                                Doc Brown par James White
+                            </figcaption>
+                        </div>
+                    </figure>
                 </article>
             </section>
         </section>

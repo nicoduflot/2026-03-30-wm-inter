@@ -184,11 +184,60 @@ a{
     color: var(--general-link-color);
 }
 
+.img-fluid{
+    max-width: 100%;
+}
+
 /* déclaration des classes CSS */
 
 .site-title{
     font-size: calc( 1.1rem + 3vw );
     line-height: calc( 1.1rem + 4vw );
+}
+
+.vignette-100,
+.miniature-100, 
+.avatar-100{
+    width: 100px;
+    height: 100px;
+    margin: var(--gutter);
+    object-position: center center;
+    background-color: #333;
+}
+
+.vignette-100{
+    object-fit: cover;
+}
+
+.miniature-100{
+    object-fit: contain;
+}
+
+.avatar-100{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.obj-pos-top{
+    object-position: top;
+}
+
+figure.media-legend{
+    background-color: #333;
+    display: inline-block;
+    padding: var(--gutter);
+    border-radius: var(--gutter);
+}
+
+figure.media-legend > div{
+    display: table;
+    margin: 0 auto;
+}
+
+figure.media-legend figcaption{
+    display: table-caption;
+    caption-side: bottom;
+    color: var(--header-color);
 }
 
 /* déclarations selon la structure de la page HTML */
