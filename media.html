@@ -35,22 +35,47 @@
             </p>
             <ul>
                 <li>
-                    <a href=""></a>
+                    <a href="#les-images">Les images</a>
                 </li>
             </ul>
         </aside>
         <section>
             <header>
-                <h2 id=""></h2>
+                <h2>Media intégrés</h2>
             </header>
             <section>
                 <header>
-                    <h3 id=""></h3>
+                    <h3 id="les-images">Les images</h3>
+                    <p>
+                        Les images peuvent être affichées à l'aide de deux balises : img et picture
+                    </p>
                 </header>
                 <article>
-                    <h4></h4>
+                    <h4 id="balise-img">La balise <code>img</code></h4>
                     <p>
-
+                        img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
+                    </p>
+                    <p>
+                        Une image est en display inline, c'est à dire que si on l'intègre à l'intérieur d'un paragraphe <img loading="lazy" src="./images/doc-signal-200w.png" alt="portrait du personnage Doc Brown dans ds couleurs fluo relative à la tendance design synthwave" />, l'image sera intégrée au flux du texte.
+                    </p>
+                    <p>
+                        les attributs d'une image :
+                    </p>
+                    <ul>
+                        <li>src : la source de l'image, le lien relatif entre la page où l'image est affichée et où se trouve l'image dans les fichiers</li>
+                        <li>loading : le mode de chargement de l'image : 
+                            <ul>
+                                <li>eager : mode par défaut, le reste de la page ne se chargera pas tant que l'image n'est pas complètement chargée</li>
+                                <li>lazy : le navigateur lance le chargement de l'image mais continu a charger le reste de la page sans interruption</li>
+                            </ul>
+                        </li>
+                        <li>
+                            alt : texte alternatif descriptif de l'image, il doit décrire visuellement l'image, pas forcément son contexte. Si l'image n'a qu'un but décoratif (non relatif au contenu de la page), on le laisse vide.
+                        </li>
+                    </ul>
+                    <a href="./animations.html" title="aller aux animations"><img src="./images/375.png" width="50" alt="" loading="lazy" /></a>
+                    <p>
+                        Il est possible d'imposer une hauteur et une largeur à une image, mais si on ne respecte pas l'homotétie (rapport hauteur / largeur), elle sera déformée.
                     </p>
                 </article>
             </section>
