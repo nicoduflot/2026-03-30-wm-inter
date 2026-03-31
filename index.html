@@ -137,7 +137,8 @@
                         <li>Élément de liste</li>
                     </ol>
                     <p>
-                        Si vous avez besoin d'interrompre l'affichage d'une liste pour intervenir, et que vous devez reprendre cette liste à la numlérotation :
+                        Si vous avez besoin d'interrompre l'affichage d'une liste pour intervenir, et que vous devez
+                        reprendre cette liste à la numlérotation :
                     </p>
                     <ol start="5">
                         <li>Élément de liste</li>
@@ -162,7 +163,7 @@
 
                         <dt>Lille</dt>
                         <dd>Meilleure ville de France</dd>
-                        
+
                         <dt>Nantes</dt>
                         <dd>Ils veulent tous être Bretons</dd>
 
@@ -172,15 +173,19 @@
                     <h4>Les citations</h4>
                     <blockquote>
                         <p>
-                            La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu en ajoutant des marges extérieures à gauche et à droite
+                            La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu en ajoutant des marges
+                            extérieures à gauche et à droite
                         </p>
                     </blockquote>
                     <p>
-                        Pour afficher une citation complète (source, auteur·ice, etc.) on va la complèter avec une série de balises liées aux citations
+                        Pour afficher une citation complète (source, auteur·ice, etc.) on va la complèter avec une série
+                        de balises liées aux citations
                     </p>
                     <blockquote>
                         <p>
-                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                                deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                                outils de la communication.</q>
                         </p>
                         <p>
                             <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997 (ISBN
@@ -307,34 +312,44 @@
                 <article>
                     <h4>Taille, police et couleur du texte</h4>
                     <p>
-                        Dans les premières version HTML, il existait la balise <code>&lt;font&gt;</code> qui permettait de changer <font size="4" face="Impact" color="darkred">la taille (size), la police (face) et la couleur d'écriture (color)</font> d'une portion de texte. Mais cette balise est dépréciée (plus dans les norme HTML) elle est pour l'instant toujours interprétée par les navigateurs. Il sera préférable de créer des classes CSS que l'on appliquera ponctuellement à l'aide d'une balise span.
+                        Dans les premières version HTML, il existait la balise <code>&lt;font&gt;</code> qui permettait
+                        de changer <font size="4" face="Impact" color="darkred">la taille (size), la police (face) et la
+                            couleur d'écriture (color)</font> d'une portion de texte. Mais cette balise est dépréciée
+                        (plus dans les norme HTML) elle est pour l'instant toujours interprétée par les navigateurs. Il
+                        sera préférable de créer des classes CSS que l'on appliquera ponctuellement à l'aide d'une
+                        balise span.
                     </p>
                     <style>
-                        .danger{
+                        .danger {
                             font-size: 18px;
                             font-family: Impact;
                             color: darkred;
                         }
                     </style>
                     <p>
-                        On utilise donc une balise <code>&lt;span&gt;</code> associée à une classe pour <span class="danger">reproduire les effets d'une balise <code>&lt;font&gt;</code></span>
+                        On utilise donc une balise <code>&lt;span&gt;</code> associée à une classe pour <span
+                            class="danger">reproduire les effets d'une balise <code>&lt;font&gt;</code></span>
                     </p>
                     <h4>Les gras et l'italique</h4>
                     <p>
                         Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui
                         ne
-                        servent qu'à attirer l'attention du lecteur sont<code>&lt;b&gt;</code> <b>pour le gras</b> et <code>&lt;i&gt;</code>
+                        servent qu'à attirer l'attention du lecteur sont<code>&lt;b&gt;</code> <b>pour le gras</b> et
+                        <code>&lt;i&gt;</code>
                         <i>pour
                             l'italique</i>.<br />
                         Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
-                        référencement, on utilisera <code>&lt;strong&gt;</code> <strong>pour le gras</strong> et l'importance
+                        référencement, on utilisera <code>&lt;strong&gt;</code> <strong>pour le gras</strong> et
+                        l'importance
                         sémantique
-                        sur la force du terme et <code>&lt;em&gt;</code> <em>pour l'italique</em> et ajouter de l'emphase à la sémantique du terme.
+                        sur la force du terme et <code>&lt;em&gt;</code> <em>pour l'italique</em> et ajouter de
+                        l'emphase à la sémantique du terme.
                     </p>
                     <h4>D'autres mise en forme de texte</h4>
                     <p>
                         A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour
-                        cela qu'il est toujours possible de <u>souligner</u>, <s>de biffer</s> ou de <mark>surligner au fluo du texte</mark>.<br />
+                        cela qu'il est toujours possible de <u>souligner</u>, <s>de biffer</s> ou de <mark>surligner au
+                            fluo du texte</mark>.<br />
                         On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un
                         hyperlien, et ils pourraient pense qu'il s'agit d'un lien cassé.
                     </p>
@@ -354,6 +369,129 @@
                 <header>
                     <h3 id="mise-a-zero-du-css">Mise à zéro du CSS</h3>
                 </header>
+                <article>
+                    <h4>Les polices de caractères</h4>
+                    <p>
+                        La police par défaut des navigateurs est faîte pour de l'impression directe, avec empâtement
+                        (type Times New Roman), en revanche, sur des écrans rétro-éclairés il sera plus confortable
+                        d'utiliser une police sans empâtement (type arial ou helvetica)
+                    </p>
+                    <h5>Les tailles de polices et le problème du em</h5>
+                    <p>
+                        Le em représente la taille par défaut d'une police sur la page dans un paragraphe.<br />
+                        Quand on utilise par exemple h1, la taille généralement appliquée par le navigateur est de 2
+                        fois le cadratin
+                    </p>
+                    <p>
+                        Mais le em pose problème : il se calcule par rapport à la taille de la police du parent le plus
+                        proche.
+                    </p>
+                    <p>
+                        2em
+                    </p>
+                    <div style="font-size: 2em; border: 1px solid black;">
+                        2em
+                        <div style="font-size: 2em; border: 1px solid black;">
+                            2em
+                        </div>
+                    </div>
+                    <p>
+                        2rem
+                    </p>
+                    <div style="font-size: 2rem; border: 1px solid black;">
+                        2rem
+                        <div style="font-size: 2rem; border: 1px solid black;">
+                            2rem
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3 id="dimensions-web-et-css">Dimensions web et CSS</h3>
+                    <p>
+                        Par défaut dans le css user agent (css du navigateur), quand on donne une taille (hauteur ou
+                        largeur) à un élément, la taille est calculée par rapport au contenu de l'élément, c'est à dire
+                        qu'elle ne prend pas en compte la taille des marges intérieures (padding) ou de la largeur des
+                        bordures.
+                    </p>
+                    <p>
+                        le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
+                    </p>
+                    <div
+                        style="box-sizing: content-box;width: 200px;height: 200px;border: 1px solid black;padding: 10px;">
+                    </div>
+                    <div
+                        style="box-sizing: border-box;width: 200px;height: 200px;border: 1px solid black; padding: 10px;">
+                    </div>
+                </article>
+                <article>
+                    <h3 id="les-positions-en-css">Les positions en CSS</h3>
+                    <p>
+                        La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont
+                        déclarés
+                        dans le fichier HTML.
+                    </p>
+                    <p>
+                        les valeurs :
+                    </p>
+                    <ul>
+                        <li>
+                            static : par défaut pour les éléments
+                        </li>
+                        <li>
+                            Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des
+                            propriétés de
+                            type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
+                        </li>
+                        <li>
+                            absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers"
+                            ou
+                            "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son ancètre le
+                            plus
+                            proche ayant la position relative.
+                        </li>
+                        <li>
+                            fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                            "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le
+                            défilement de la page.
+                        </li>
+                        <li>
+                            sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défilement
+                            vers le bas, bougera jusqu'à la disparition du viewport de l'élément parent, ensuite, il
+                            reste
+                            en haut du viewport avec le décalage indiqué par rapport à son élément parent.
+                        </li>
+                    </ul>
+                    <style>
+                        /* 
+                        On écrit le CSS en essayant d'appliquer le D.R.Y.
+                        Don't Repeat Yourself
+                        */
+                        .exemple-position{
+                            width: 200px;
+                            height: 200px;
+                            border-width: 3px;
+                            border-style: solid;
+                            border-color: black;
+                        }
+                        .carre-ex{
+                            width: 50px;
+                            height: 50px;
+                        }
+                        .carre-vert{
+                            /* les positionnements top, left, right ou bottom ne fonctionnent que si l'élément a une position absolute, sticky, relative ou fixed */
+                            top : 10px;
+                            left : 10px;
+                            background-color: darkgreen;
+                        }
+                        .carre-rouge{
+                            background-color: darkred;
+                        }
+                    </style>
+                    <div class="exemple-position">
+                        <div class="carre-ex carre-vert"></div>
+                        <div class="carre-ex carre-rouge"></div>
+                    </div>
+                </article>
             </section>
         </section>
     </main>
