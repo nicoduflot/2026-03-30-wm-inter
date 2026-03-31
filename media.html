@@ -6,6 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les media avec HTML - CSS | Formation HTML - CSS</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script>
+        function playMedia(cible) {
+            document.getElementById(cible).play();
+        }
+
+        function pauseMedia(cible) {
+            document.getElementById(cible).pause();
+        }
+
+        function stopMedia(cible) {
+            document.getElementById(cible).pause();
+            document.getElementById(cible).currentTime = 0;
+        }
+    </script>
 </head>
 
 <body>
@@ -48,6 +62,23 @@
                         </li>
                     </ul>
                 </li>
+                <li>
+                    <a href="#l-audio">L'audio</a>
+                </li>
+                <li>
+                    <a href="#la-video">La vidéo</a>
+                </li>
+                <li>
+                    <a href="media-embarques">Media embarqués</a>
+                    <ul>
+                        <li>
+                            <a href="#audio-embarquee">L'audio embarquée</a>
+                        </li>
+                        <li>
+                            <a href="#video-embarquee">La vidéo embarquée</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </aside>
         <section>
@@ -64,29 +95,41 @@
                 <article>
                     <h4 id="balise-img">La balise <code>img</code></h4>
                     <p>
-                        img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
+                        img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa
+                        place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par
+                        exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
                     </p>
                     <p>
-                        Une image est en display inline, c'est à dire que si on l'intègre à l'intérieur d'un paragraphe <img loading="lazy" src="./images/doc-signal-200w.png" alt="portrait du personnage Doc Brown dans ds couleurs fluo relative à la tendance design synthwave" />, l'image sera intégrée au flux du texte.
+                        Une image est en display inline, c'est à dire que si on l'intègre à l'intérieur d'un paragraphe
+                        <img loading="lazy" src="./images/doc-signal-200w.png"
+                            alt="portrait du personnage Doc Brown dans ds couleurs fluo relative à la tendance design synthwave" />,
+                        l'image sera intégrée au flux du texte.
                     </p>
                     <p>
                         les attributs d'une image :
                     </p>
                     <ul>
-                        <li>src : la source de l'image, le lien relatif entre la page où l'image est affichée et où se trouve l'image dans les fichiers</li>
-                        <li>loading : le mode de chargement de l'image : 
+                        <li>src : la source de l'image, le lien relatif entre la page où l'image est affichée et où se
+                            trouve l'image dans les fichiers</li>
+                        <li>loading : le mode de chargement de l'image :
                             <ul>
-                                <li>eager : mode par défaut, le reste de la page ne se chargera pas tant que l'image n'est pas complètement chargée</li>
-                                <li>lazy : le navigateur lance le chargement de l'image mais continu a charger le reste de la page sans interruption</li>
+                                <li>eager : mode par défaut, le reste de la page ne se chargera pas tant que l'image
+                                    n'est pas complètement chargée</li>
+                                <li>lazy : le navigateur lance le chargement de l'image mais continu a charger le reste
+                                    de la page sans interruption</li>
                             </ul>
                         </li>
                         <li>
-                            alt : texte alternatif descriptif de l'image, il doit décrire visuellement l'image, pas forcément son contexte. Si l'image n'a qu'un but décoratif (non relatif au contenu de la page), on le laisse vide.
+                            alt : texte alternatif descriptif de l'image, il doit décrire visuellement l'image, pas
+                            forcément son contexte. Si l'image n'a qu'un but décoratif (non relatif au contenu de la
+                            page), on le laisse vide.
                         </li>
                     </ul>
-                    <a href="./animations.html" title="aller aux animations"><img src="./images/375.png" width="50" alt="" loading="lazy" /></a>
+                    <a href="./animations.html" title="aller aux animations"><img src="./images/375.png" width="50"
+                            alt="" loading="lazy" /></a>
                     <p>
-                        Il est possible d'imposer une hauteur et une largeur à une image, mais si on ne respecte pas l'homotétie (rapport hauteur / largeur), elle sera déformée.
+                        Il est possible d'imposer une hauteur et une largeur à une image, mais si on ne respecte pas
+                        l'homotétie (rapport hauteur / largeur), elle sera déformée.
                     </p>
                     <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="vignette-100" />
                     <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" class="vignette-100" />
@@ -98,11 +141,14 @@
                 <article>
                     <h4 id="la-balise-figure">La balise <code>figure</code></h4>
                     <p>
-                        Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une légende, avec la balise figcaption.
+                        Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement
+                        et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter
+                        une légende, avec la balise figcaption.
                     </p>
                     <figure class="media-legend">
                         <div>
-                            <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png" class="img-fluid" alt="" />
+                            <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png"
+                                class="img-fluid" alt="" />
                             <figcaption>
                                 Pochette d'un album de musique Synthwave. Texte supplémentaire.
                             </figcaption>
@@ -112,7 +158,8 @@
                 <article>
                     <h4 id="la-balise-picture">La balise picture</h4>
                     <p>
-                        La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
+                        La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible
+                        autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
                     </p>
                     <figure class="media-legend">
                         <div>
@@ -127,6 +174,56 @@
                         </div>
                     </figure>
                 </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="l-audio">L'audio</h3>
+                </header>
+                <article>
+                    <h4>La balise <code>audio</code></h4>
+                    <p>
+                        Pour mettre à disposition un fichier audio sur un site, on utlise la balise audio.
+                        Cette balise peut soit appeler un seul fichier, ou utiliser aussi la balise source.
+                        Utiliser plusieurs sources permet de s'adapter à la configuration de l'utilisateur. Un appareil,
+                        pour lire un fichier audio (ou vidéo) doit posséder les bon codecs. Si je met a disposition un
+                        fichier avec une extension que l'appareil ne connaît pas, j'aurais une erreur. Si je propose le
+                        même fichier dans des formats différents avec source, l'appareil lancera le premier fichier
+                        qu'il est capable de lire.
+                    </p>
+                    <figure>
+                        <audio controls id="diablo">
+                            <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                            <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                        </audio>
+                        <figcaption>
+                            <button onclick="playMedia('diablo')">Lire</button>
+                            <button onclick="pauseMedia('diablo')">Pause</button>
+                            <button onclick="stopMedia('diablo')">Stop</button>
+                        </figcaption>
+                    </figure>
+                </article>
+                <area>
+                <h4>La balise <code>vodeo</code></h4>
+                <p>
+                    La balise <code>video</code> se comporte comme la balise audio, avec quelques attributs
+                    supplémentaire propre au format vidéo.
+                </p>
+                <figure>
+                    <video id="fallout" class="img-fluid" src="./media/video/Fallout-4-Launch-Trailer.mp4" controls
+                        muted></video>
+                    <figcaption>
+                        <button onclick="playMedia('fallout')">Lire</button>
+                        <button onclick="pauseMedia('fallout')">Pause</button>
+                        <button onclick="stopMedia('fallout')">Stop</button>
+                    </figcaption>
+                </figure>
+                <p>
+                    Exercice : <br />
+                    recréer la figure vidéo avec le lecteur pour les deux vidéos nommées
+                    "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". 
+                    (utilisez <code>source</code> )<br />
+                    Utilisez l'id "bunny" pour l'élément vidéo.
+                </p>
             </section>
         </section>
     </main>
