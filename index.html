@@ -10,16 +10,20 @@
 
 <body>
     <header role="banner">
-        <span>Formation HTML - CSS</span>
+        <div>
+            <span class="site-title">Formation HTML - CSS</span>
+        </div>
     </header>
     <nav role="navigation">
-        <ul>
-            <li><a href="./" title="Introduction au HTML - CSS">Accueil</a></li>
-            <li><a href="./media.html" title="Les media en HTML - CSS">Media</a></li>
-            <li><a href="./contact.html" title="Les formulaires en HTML - CSS">Contact</a></li>
-            <li><a href="./animations.html" title="Les animations HTML - CSS">Animations</a></li>
-            <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap">Bootstrap</a></li>
-        </ul>
+        <div>
+            <ul>
+                <li><a href="./" title="Introduction au HTML - CSS">Accueil</a></li>
+                <li><a href="./media.html" title="Les media en HTML - CSS">Media</a></li>
+                <li><a href="./contact.html" title="Les formulaires en HTML - CSS">Contact</a></li>
+                <li><a href="./animations.html" title="Les animations HTML - CSS">Animations</a></li>
+                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap">Bootstrap</a></li>
+            </ul>
+        </div>
     </nav>
     <main>
         <header>
@@ -30,17 +34,26 @@
                 <span>Table des matières</span>
             </p>
             <ul>
-                <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
-                <li><a href="#balises-de-modification-de-texte">Balises de modification de texte</a></li>
-                <li><a href="#mise-a-zero-du-css">Mise à zéro du CSS</a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
+                <li>
+                    <a href="#bases-en-html">Base en HTML</a>
+                    <ul>
+                        <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
+                        <li><a href="#balises-de-modification-de-texte">Balises de modification de texte</a></li>
+                        <li><a href="#mise-a-zero-du-css">Mise à zéro du CSS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#bases-en-css">Bases en CSS</a>
+                    <ul>
+                        <li><a href="#dimensions-web-et-css">Dimensions web et SS</a></li>
+                        <li><a href="#les-positions-en-css">Les positions en CSS</a></li>
+                    </ul>
+                </li>
             </ul>
         </aside>
         <section>
             <header>
-                <h2>Bases en HTML</h2>
+                <h2 id="bases-en-html">Bases en HTML</h2>
             </header>
             <section>
                 <header>
@@ -363,7 +376,7 @@
         </section>
         <section>
             <header>
-                <h2>Base en CSS</h2>
+                <h2 id="bases-en-css">Bases en CSS</h2>
             </header>
             <section>
                 <header>
