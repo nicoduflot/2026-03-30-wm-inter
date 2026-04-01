@@ -277,7 +277,9 @@
                     <h3 id="video-embarquee">Vidéo embarqué</h3>
                     <h4>L'iframe</h4>
                     <p>
-                        L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est possible d'inserrer d'autres types de fichiers, par exemple des pdf ou  directement des fichiers vidéos, sons, etc.
+                        L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est
+                        possible d'inserrer d'autres types de fichiers, par exemple des pdf ou directement des fichiers
+                        vidéos, sons, etc.
                     </p>
                     <p>
                         L'iframe avait un ancètre, la combinaison frameset et frame.
@@ -291,17 +293,78 @@
                     <ul>
                         <li><a href="./documents/PP3.pdf" target="documents">PP3</a></li>
                         <li><a href="./documents/books.xml" target="documents">books.xml</a></li>
-                        <li><a href="./documents/uxpin_web_ui_design_for_the_human_eye_1.pdf" target="documents">Web design for human eye</a></li>
+                        <li><a href="./documents/uxpin_web_ui_design_for_the_human_eye_1.pdf" target="documents">Web
+                                design for human eye</a></li>
                     </ul>
                     <iframe name="documents" src="./documents/PP3.pdf" width="100%" height="400">
                         <p>
                             Votre navigateur ne supporte les cdres de page (iframe)
                         </p>
                     </iframe>
-                    <h4></h4>
                 </article>
                 <article>
+                    <h4>Vidéos hébregées hors-site</h4>
+                    <p>
+                        La plupart des sites d'hébergement de vidéos proposent un partage "intégré" en utilisant les
+                        iframes
+                    </p>
+                    <figure class="video">
+                        <iframe width="300" height="169" src="https://www.youtube.com/embed/cKxAWNJNmDw?si=MC_azdp202zaKOMq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </figure>
+                    <p>
+                        Le problème rencontré quand on ne recalcule pas le ration de la vidéo pour les iframe d'intégration, on se retrouve avec une iframe à la taille bloquée plus grande que l'affichafe de l'appareil.
+                    </p>
+                    <p>
+                        Des frameworks CSS tels que Bootstraps ont choisi de créer des classes CSS à appliquer à un conteneur d'une iframe (<code>figure</code> par exemple ) sans taille bloquée, et le css gère lui-même l'adaptation.
+                    </p>
+                    <!--
+                    .ratio {
+                    position: relative;
+                    width: 100%;
+                    }
+                    .ratio::before {
+                    display: block;
+                    padding-top: var(--bs-aspect-ratio);
+                    content: "";
+                    }
+                    .ratio > * {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    }
 
+                    .ratio-1x1 {
+                    --bs-aspect-ratio: 100%;
+                    }
+
+                    .ratio-4x3 {
+                    --bs-aspect-ratio: 75%;
+                    }
+
+                    .ratio-16x9 {
+                    --bs-aspect-ratio: 56.25%;
+                    }
+
+                    .ratio-21x9 {
+                    --bs-aspect-ratio: 42.8571428571%;
+                    }
+                    -->
+                </article>
+                <article>
+                    <h4>Audio hébergé hors-site</h4>
+                    <p>
+                        Les site de partage d'audio proposent déjà des iframe faites pour l'adaptatif
+                    </p>
+                    <p>
+                        Soundcloud
+                    </p>
+                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A67020069&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/weswaltz" title="Wes Waltz" target="_blank" style="color: #cccccc; text-decoration: none;">Wes Waltz</a> · <a href="https://soundcloud.com/weswaltz/wes-waltz-vs-dj-stamif-more-is" title="Wes waltz vs DJ STAM IFF More is More mix" target="_blank" style="color: #cccccc; text-decoration: none;">Wes waltz vs DJ STAM IFF More is More mix</a></div>
+                    <p>
+                        Bandcamp
+                    </p>
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=465816255/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://lizzobangers.bandcamp.com/album/lizzobangers">LIZZOBANGERS de LIZZO</a></iframe>
                 </article>
             </section>
         </section>

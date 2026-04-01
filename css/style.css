@@ -240,6 +240,11 @@ figure.media-legend figcaption{
     color: var(--header-color);
 }
 
+figure.video{
+    margin-left: 0;
+    margin-right: 0;
+}
+
 /* déclarations selon la structure de la page HTML */
 
 body > header > *,
