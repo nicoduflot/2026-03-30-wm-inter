@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
 </head>
 
 <body>
@@ -29,7 +30,7 @@
     </nav>
     <main>
         <header>
-            <h1>Les formulaires</h1>
+            <h1>Les animations avec CSS</h1>
         </header>
         <aside>
             <p>
@@ -52,11 +53,11 @@
                 <h2>Les animations</h2>
             </header>
             <section>
-                <header>
-                    <h3 id="readymade">Les animations "ready-made"</h3>
-                </header>
                 <article>
-                    <h4>Animate CSS</h4>
+                    <header>
+                        <h3 id="readymade" class="animate__animated animate__bounce animate__infinite">Les animations "ready-made"</h3>
+                    </header>
+                    <h4 class="animate__animated animate__rubberBand">Animate CSS</h4>
                     <p>
                         Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre précis.
                     </p>
@@ -69,6 +70,87 @@
                     <p id="animation-cible">
                         Coucou !
                     </p>
+                    <script>
+                        /* récupération du bouton */
+                        const btnAnim = document.getElementById('btn-animation');
+                        /*  récupération de la cble de l'animation */
+                        const pAnim = document.getElementById('animation-cible');
+                        /* au clic sur le bouton, on déclenche une fonctionnalité */
+                        btnAnim.addEventListener('click', function(){
+                            /* on ajoute à la cible les classes pour l'animer */
+                            pAnim.classList.add('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                            /* un élément animé nous indique quand son animation est finie */
+                            pAnim.addEventListener('animationend', function(){
+                                /* à la fin de l'animation, on retire les classes d'animation de l'élément */
+                                pAnim.classList.remove('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                            });
+                        });
+                    </script>
+                </article>
+                <article>
+                    <header>
+                        <h3 id="diy">Les animations D.I.Y.</h3>
+                    </header>
+                    <p class="translation">
+                        Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une transition, on programme la ou les animations et / ou transformations dans cette transition.
+                    </p>
+                    <p class="scale-border">
+                        Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des transitions et / ou transformations.
+                    </p>
+                    <p>
+                        on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
+                    </p>
+                    <ul>
+                        <li>transition-property: la propriété CSS subissant la transition</li>
+                        <li>transition-duration: la durée de la transition en seconde</li>
+                        <li>transition-timing-function: la façon dont la transition se fait (le "mouvement" à l'écran)
+                        </li>
+                        <li>transition-delay: le délais d'attente avant le lancement de la transition</li>
+                    </ul>
+                </article>
+                <article>
+                    <header>
+                        <h3 id="images-clefs">Les animations avec des images clefs</h3>
+                    </header>
+                    <h4>keyframes</h4>
+                    <div class="espace-animation">
+                        <div class="cercle-animation animation">
+                            <i class="bi bi-arrow-right-circle-fill"></i>
+                        </div>
+                    </div>
+                    <p>
+                        Barre de chargement
+                    </p>
+                    <div class="cadre-chargement">
+                        ease
+                        <div class="chargement">
+                            <div class="charge-1"></div>
+                        </div>
+                        ease-in-out
+                        <div class="chargement">
+                            <div class="charge-2"></div>
+                        </div>
+                        ease-in
+                        <div class="chargement">
+                            <div class="charge-3"></div>
+                        </div>
+                        steps(10, end)
+                        <div class="chargement">
+                            <div class="charge-4"></div>
+                        </div>
+                        ease-out
+                        <div class="chargement">
+                            <div class="charge-5"></div>
+                        </div>
+                        linear
+                        <div class="chargement">
+                            <div class="charge-6"></div>
+                        </div>
+                    </div>
+                    <p>
+                        Pour des animations réussies, appelez-nous <i class="bi bi-telephone-fill clignoter"></i>
+                    </p>
+                </article>
                 </article>
             </section>
         </section>
