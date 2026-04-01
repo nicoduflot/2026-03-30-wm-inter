@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Les formulaires avec HTML - CSS | Formation HTML - CSS</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
 </head>
 
 <body>
@@ -168,11 +169,107 @@
                             <div id="info-email" class="message message-info">
                                 Veuillez entrez un email valide, ce champ est obligatoire
                             </div>
+                            <label for="age">Votre âge</label> 
+                            <input type="number" name="age" id="age" aria-describedby="info-age" min="13" max="99" value="13" />
+                            <div id="info-age" class="message message-info">
+                                Veuillez entrer votre âge, l'age légal minimum pour nous faire une demande est 13 ans.
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Détails de la demande</legend>
+                            <p>
+                                <label for="type-demande">Type de la demande</label> 
+                                <select name="type-demande" id="type-demande" required aria-describedby="info-type-demande">
+                                    <option aria-label="Choix de demande" value="">Choisissez votre option</option>
+                                    <optgroup label="Options unitaires">
+                                        <option aria-label="option unitaire 1">Option n°1</option>
+                                        <option aria-label="option unitaire 2">Option n°2</option>
+                                        <option aria-label="option unitaire 3">Option n°3</option>
+                                        <option aria-label="option unitaire 4">Option n°4</option>
+                                        <option aria-label="option unitaire 5">Option n°5</option>
+                                    </optgroup>
+                                    <optgroup label="Regroupement d'options">
+                                        <option aria-label="Toutes les options sauf la 1">Toutes sauf option 1</option>
+                                        <option aria-label="Toutes les options sauf la 2">Toutes sauf option 2</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p>
+                                <label>Vous représentez</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-personne" /> <label for="physique">Personne physique</label> <br />
+                                <input type="radio" name="personne" id="morale" value="morale"  aria-describedby="info-personne" /> <label for="morale">Personne morale</label>
+                            </p>
+                            <div id="info-personne" class="message message-info">
+                                Veuillez indiquer si vous représentez une personne physique (particulier...) ou une personne morale (Entreprise, association, institution, etc.)
+                            </div>
+                            <p>
+                                <label>Vos modèles de diffusion</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="diff-email" id="diff-email" aria-describedby="info-diff" value="email" /> <label for="diff-email">Campagne d'emailing</label><br />
+                                <input type="checkbox" name="diff-tel" id="diff-tel" aria-describedby="info-diff" value="tel" /> <label for="diff-tel">Télé-opérateurs</label><br />
+                                <input type="checkbox" name="diff-radio" id="diff-radio" aria-describedby="info-diff"  value="radio" /> <label for="diff-radio">Annonces radiophoniques</label><br />
+                                <input type="checkbox" name="diff-tv" id="diff-tv" aria-describedby="info-diff" value="tv" /> <label for="diff-tv">Annonces télévisuelles</label><br />
+                            </p>
+                            <div id="info-diff" class="message message-info">
+                                Veuillez indiquer le type de prestation souhaité, si aucune n'est cochée, un commercial vous contactera.
+                            </div>
+                            <p>
+                                <label for="qualite">Qualité de service</label><br /> 
+                                <input type="range" name="qualite" id="qualite" min="0" max="10" step="0.5" value="5" aria-describedby="info-qualite" aria-valuenow="5" /> <span id="value-qualite">5</span>
+                            </p>
+                            <script>
+                                /* on crée une constante dans laquelle on récupère l'élément range */
+                                const range = document.getElementById('qualite');
+                                /* on crée un constante dans laquelle on récupère l'élément d'affichage du range */
+                                const valueQualite = document.getElementById('value-qualite');
+                                /* on surveille l'élément range, au changement on déclenche une fonctionnalité */
+                                range.addEventListener('change', function(){
+                                    /* on affiche la valeur actuele de range dans le span d'affichage de la valeur */
+                                    valueQualite.innerHTML = range.value;
+                                    /* on modifie l'attribue aria-valuenow de l'élément range par sa nouvelle valeur (lecteurs d'écrans) */
+                                    range.setAttribute('aria-valuenow', range.value);
+                                });
+                            </script>
+                            <div id="info-qualite" class="message message-info">
+                                Comment avez-vous trouvé ce formulaire, veuillez attribuer une note entre 0 et 10.
+                            </div>
+                            <p>
+                                <label for="color">Choisissez une couleur de carte</label><br />
+                                <input type="color" id="color" name="color" value="#000000" aria-valuenow="#000000" aria-describedby="info-color" /> <span id="value-color">#000000</span>
+                            </p>
+                            <script>
+                                /* on crée une constante dans laquelle on récupère l'élément color */
+                                const color = document.getElementById('color');
+                                /* on crée une constante dans laquelle on récupère l'élément d'affichage du color */
+                                const valueColor = document.getElementById('value-color');
+                                /* on surveille l'élément color, au changement on déclenche une fonctionnalité */
+                                color.addEventListener('change', function(){
+                                    /* on affiche la valeur actuele de color dans le span d'affichage de la valeur */
+                                    valueColor.innerHTML = color.value;
+                                    /* on modifie l'attribue aria-valuenow de l'élément color par sa nouvelle valeur (lecteurs d'écrans) */
+                                    color.setAttribute('aria-valuenow', color.value);
+                                });
+                            </script>
+                            <div id="info-color" class="message message-info">
+                                Choisissez la couleur de la carte d'invitation.
+                            </div>
+                            <p>
+                                <label for="description">Détails de la demande</label><br />
+                                <textarea name="description" id="description" required placeholder="Détail de votre demande" aria-describedby="info-description"></textarea>
+                            </p>
+                            <div id="info-description" class="message message-info">
+                                Inscrivez les details de votre demande. ce champ est obligatoire.
+                            </div>
                         </fieldset>
                         <p>
                             <button type="submit">
                                 Envoyer
-                            </button>
+                            </button> 
+                            <button type="reset">Effacer les données de formulaire</button>
+                            <button type="button">Un bouton de base</button>
                         </p>
                     </form>
                     <h4>Exercice</h4>

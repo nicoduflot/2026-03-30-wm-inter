@@ -1,0 +1,27 @@
+/*
+CSS dédié aux page de formulaire
+
+il est possible de'utiliser les attribut d'un élément pour les sélecteurs CSS 
+
+[attribut] un élément ayant l'attribut
+[aria-valuenow] les éléments possèdant l'attribut "aria-valuenow"
+
+[type="text"] => les éléments ayantl'attribut type="text"
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    // les input de type text, email et number
+}
+
+*/
+
+:root{
+    
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    font-size: 1rem;
+}
