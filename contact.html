@@ -7,6 +7,7 @@
     <title>Les formulaires avec HTML - CSS | Formation HTML - CSS</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.min.css" />
 </head>
 
 <body>
@@ -18,11 +19,11 @@
     <nav role="navigation">
         <div>
             <ul>
-                <li><a href="./" title="Introduction au HTML - CSS">Accueil</a></li>
-                <li><a href="./media.html" target="_self" title="Les media en HTML - CSS">Media</a></li>
-                <li><a href="./contact.html" title="Les formulaires en HTML - CSS">Contact</a></li>
-                <li><a href="./animations.html" title="Les animations HTML - CSS">Animations</a></li>
-                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap">Bootstrap</a></li>
+                <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Accueil</a></li>
+                <li><a href="./media.html" title="Les media en HTML - CSS"><i class="bi bi-film"></i> Media</a></li>
+                <li><a href="./contact.html" title="Les formulaires en HTML - CSS"><i class="bi bi-envelope-open-fill"></i> Contact</a></li>
+                <li><a href="./animations.html" title="Les animations HTML - CSS"><i class="bi bi-person-walking"></i> Animations</a></li>
+                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
             </ul>
         </div>
     </nav>
@@ -148,7 +149,7 @@
                 </header>
                 <article>
                     <h4>Demande de devis</h4>
-                    <form method="get" action="./contact.html">
+                    <form class="form-contact" method="get" action="./contact.html">
                         <fieldset>
                             <legend>Information personnelles</legend>
                             <p>
@@ -265,17 +266,35 @@
                             </div>
                         </fieldset>
                         <p>
-                            <button type="submit">
+                            <button class="btn btn-success" type="submit">
                                 Envoyer
                             </button> 
-                            <button type="reset">Effacer les données de formulaire</button>
-                            <button type="button">Un bouton de base</button>
+                            <button class="btn btn-warning" type="reset">Effacer les données de formulaire</button>
+                            <button class="btn btn-danger" type="button">Un bouton de base</button>
+                            <button class="btn btn-info" type="button">Un bouton de base</button>
+                            <button class="btn btn-dark" type="button">Un bouton de base</button>
+                            <button class="btn btn-light" type="button">Un bouton de base</button>
                         </p>
                     </form>
-                    <h4>Exercice</h4>
-                    <p>
-                        Appliquer les couleurs, la bordure, le bg sur les classes button et button-success etc...
-                    </p>
+                    <h4>Les style de message</h4>
+                    <div class="message message-info">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus id itaque tenetur vitae corporis ullam quia soluta. Blanditiis cumque animi in aspernatur autem ab dolorum illum recusandae, dolorem dolores?
+                    </div>
+                    <div class="message message-success">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus id itaque tenetur vitae corporis ullam quia soluta. Blanditiis cumque animi in aspernatur autem ab dolorum illum recusandae, dolorem dolores?
+                    </div>
+                    <div class="message message-danger">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus id itaque tenetur vitae corporis ullam quia soluta. Blanditiis cumque animi in aspernatur autem ab dolorum illum recusandae, dolorem dolores?
+                    </div>
+                    <div class="message message-warning">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus id itaque tenetur vitae corporis ullam quia soluta. Blanditiis cumque animi in aspernatur autem ab dolorum illum recusandae, dolorem dolores?
+                    </div>
+                    <div class="message message-light">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus id itaque tenetur vitae corporis ullam quia soluta. Blanditiis cumque animi in aspernatur autem ab dolorum illum recusandae, dolorem dolores?
+                    </div>
+                    <div class="message message-dark">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt minus id itaque tenetur vitae corporis ullam quia soluta. Blanditiis cumque animi in aspernatur autem ab dolorum illum recusandae, dolorem dolores?
+                    </div>
                 </article>
             </section>
         </section>

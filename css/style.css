@@ -172,6 +172,22 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     --general-link-color: #CF3E36;
     --gutter: 0.5rem;
     scroll-behavior: smooth;
+
+    --light-border-color: #666;
+    --dark-border-color: black;
+    --info-border-color: #1583e3;
+    --danger-border-color: #ea2a3d;
+    --success-border-color: #07ca73;
+    --warning-border-color: #ec8a12;
+    
+    --light-bg-color: #ddd;
+    --dark-bg-color: #454545;
+    --info-bg-color: #b4d0e8;
+    --danger-bg-color: #f1aeb5;
+    --success-bg-color: #a3cfbb;
+    --warning-bg-color: #f1d3ae;
+
+    --dark-color: white;
 }
 
 /* déclarations générales */
@@ -246,6 +262,59 @@ figure.video{
     margin-right: 0;
 }
 
+/* classes des message */
+
+.message, .btn{
+    font-size: 0.9rem;
+    font-style: italic;
+    border: 2px solid transparent;
+    padding: calc(var(--gutter) /2 );
+    border-radius: calc(var(--gutter) /2 );
+    margin: var(--gutter);
+}
+
+.btn{
+    font-style: normal;
+}
+
+.btn:hover, 
+.btn:focus,
+.btn:focus-visible{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.message-info, .btn-info{
+    border-color: var(--info-border-color);
+    background-color: var(--info-bg-color);
+}
+
+.message-success, .btn-success{
+    border-color: var(--success-border-color);
+    background-color: var(--success-bg-color);
+}
+
+.message-warning, .btn-warning{
+    border-color: var(--warning-border-color);
+    background-color: var(--warning-bg-color);
+}
+
+.message-danger, .btn-danger{
+    border-color: var(--danger-border-color);
+    background-color: var(--danger-bg-color);
+}
+
+.message-light, .btn-light{
+    border-color: var(--light-border-color);
+    background-color: var(--light-bg-color);
+}
+
+.message-dark, .btn-dark{
+    border-color: var(--dark-border-color);
+    background-color: var(--dark-bg-color);
+    color: var(--dark-color);
+}
+
 /* déclarations selon la structure de la page HTML */
 
 body > header > *,
@@ -287,7 +356,10 @@ body > nav a{
     padding-right: var(--gutter);
 }
 
-body > nav a:hover{
+body > nav a:hover,
+body > nav a:focus, 
+body > nav a:focus-visible{
+    outline: none;
     color: var(--main-nav-bg-color);
     background-color: var(--main-nav-link-color);
 }

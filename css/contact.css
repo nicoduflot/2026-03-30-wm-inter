@@ -17,11 +17,48 @@ input[type="number"]{
 */
 
 :root{
-    
+    --form-border-radius: calc( var(--gutter) / 2) ;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="number"]{
+fieldset{
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: var(--form-border-radius);
+}
+
+form.form-contact input[type="text"],
+form.form-contact input[type="email"],
+form.form-contact input[type="number"],
+form.form-contact select, form.form-contact textarea{
     font-size: 1rem;
+    border: 2px solid rgb(80, 80, 80);
+    border-radius: var(--form-border-radius);
+}
+
+form.form-contact select{
+    height: 1.5rem;
+}
+
+form.form-contact{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form.form-contact textarea{
+    width: 100%;
+    height: 25vh;
+}
+
+form.form-contact input[type="text"]:valid,
+form.form-contact input[type="email"]:valid,
+form.form-contact input[type="number"]:valid,
+form.form-contact select:valid, form.form-contact textarea:valid{
+    border-color: var(--success-border-color);
+}
+
+form.form-contact input[type="text"]:invalid,
+form.form-contact input[type="email"]:invalid,
+form.form-contact input[type="number"]:invalid,
+form.form-contact select:invalid, form.form-contact textarea:invalid{
+    border-color: var(--danger-border-color);
 }
