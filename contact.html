@@ -147,7 +147,34 @@
                 </header>
                 <article>
                     <h4>Demande de devis</h4>
-                    
+                    <form method="get" action="./contact.html">
+                        <fieldset>
+                            <legend>Information personnelles</legend>
+                            <p>
+                                <label for="nom">Nom :</label> <input name="nom" id="nom" type="text" placeholder="Votre nom d'usage" aria-describedby="info-nom" required autofocus />
+                            </p>
+                            <div id="info-nom" class="message message-info">
+                                Entrez votre nom d'usage, ce champ est obligatoire.
+                            </div>
+                            <p>
+                                <label id="tag-prenom">Prenom :</label> <input type="text" name="prenom" id="prenom" aria-labelledby="tag-prenom" aria-describedby="info-prenom" placeholder="Votre prénom" />
+                            </p>
+                            <div id="info-prenom" class="message message-info">
+                                Entrez votre prénom, dans le cas d'une société, ne mettez rien. Champ non obligatoire
+                            </div>
+                            <p>
+                                <label for="email">Email :</label> <input type="email" name="email" id="email" aria-describedby="info-email" required placeholder="toto@titi.com" pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
+                            </p>
+                            <div id="info-email" class="message message-info">
+                                Veuillez entrez un email valide, ce champ est obligatoire
+                            </div>
+                        </fieldset>
+                        <p>
+                            <button type="submit">
+                                Envoyer
+                            </button>
+                        </p>
+                    </form>
                     <h4>Exercice</h4>
                     <p>
                         Appliquer les couleurs, la bordure, le bg sur les classes button et button-success etc...
