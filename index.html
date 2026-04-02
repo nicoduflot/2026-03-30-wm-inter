@@ -621,13 +621,27 @@
                 </ul>
                 <h4><code>float</code></h4>
                 <div style="border: 1px solid black;padding: 0.25rem;">
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 130px;float: left;display: inline-block; height: 50px;">Toto</div>
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
-                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 130px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
+                    <div
+                        style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">
+                        Toto</div>
                     <div style="clear: both;"></div>
                 </div>
                 <img src="./images/doc-signal-200w.png" style="float: left;margin: 0.5rem 0.5rem 0.5rem 0;" />
@@ -649,17 +663,21 @@
                 <div style="clear: both;"></div>
                 <h4>Display block, inline, inline-block dans un flux</h4>
                 <p>
-                    Lorem ipsum dolor <span style="display: inline;color: blue;" title="display: inline">sit amet</span> consectetur adipisicing elit. <span style="display: block;color: green;" title="display: block">Tempore</span> modi beatae, rem placeat excepturi hic explicabo ad aliquam dolores adipisci inventore dolore <span style="display: inline-block;color: red;" title="display: inline-block">voluptate</span> odit delectus velit ex itaque eum optio.
+                    Lorem ipsum dolor <span style="display: inline;color: blue;" title="display: inline">sit amet</span>
+                    consectetur adipisicing elit. <span style="display: block;color: green;"
+                        title="display: block">Tempore</span> modi beatae, rem placeat excepturi hic explicabo ad
+                    aliquam dolores adipisci inventore dolore <span style="display: inline-block;color: red;"
+                        title="display: inline-block">voluptate</span> odit delectus velit ex itaque eum optio.
                 </p>
                 <h4>Display : flex</h4>
                 <style>
                     /* phone */
                     .exemple-display-flex,
-                    .div-flex{
+                    .div-flex {
                         border: 1px solid black;
                     }
 
-                    .exemple-display-flex{
+                    .exemple-display-flex {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: flex-start;
@@ -667,40 +685,43 @@
                         padding-bottom: var(--gap-display-flex);
                         padding-left: var(--gap-display-flex);
                     }
-                    
-                    .div-flex{
+
+                    .div-flex {
                         width: 100%;
                         margin-top: var(--gap-display-flex);
                         margin-right: var(--gap-display-flex);
                     }
 
                     @media screen and (min-width: 500px) {
+
                         /* small */
-                        .div-flex{
-                            width: calc( 50% - var(--gap-display-flex) );
+                        .div-flex {
+                            width: calc(50% - var(--gap-display-flex));
                         }
                     }
 
                     @media screen and (min-width: 900px) {
+
                         /* md */
-                        .div-flex{
-                            width: calc( (100% / 3) - var(--gap-display-flex));
-                        }
-                        
-                        .flex-col-md-2{
-                            width: calc( ((100% / 3) * 2) - var(--gap-display-flex));
-                        }
-                    }
-                    
-                    @media screen and (min-width: 1100px) {
-                        /* lg */
-                        .div-flex{
-                            width: calc( (100% / 4) - var(--gap-display-flex));
+                        .div-flex {
+                            width: calc((100% / 3) - var(--gap-display-flex));
                         }
 
-                        .flex-col-md-2, 
-                        .flex-col-lg-2{
-                            width: calc( ((100% / 4) * 2) - var(--gap-display-flex));
+                        .flex-col-md-2 {
+                            width: calc(((100% / 3) * 2) - var(--gap-display-flex));
+                        }
+                    }
+
+                    @media screen and (min-width: 1100px) {
+
+                        /* lg */
+                        .div-flex {
+                            width: calc((100% / 4) - var(--gap-display-flex));
+                        }
+
+                        .flex-col-md-2,
+                        .flex-col-lg-2 {
+                            width: calc(((100% / 4) * 2) - var(--gap-display-flex));
                         }
 
                     }
@@ -711,7 +732,8 @@
                             toto-01
                         </p>
                         <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium nulla explicabo optio deserunt sapiente.
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium nulla explicabo optio
+                            deserunt sapiente.
                         </p>
                     </div>
                     <div class="div-flex flex-col-md-2">toto-02</div>
@@ -732,11 +754,11 @@
                 <img class="img-fluid" src="./support/005-grille-ligne-colonnes-aires.png" />
                 <style>
                     .exemple-display-grid,
-                    .div-grid{
+                    .div-grid {
                         border: 1px solid black;
                     }
 
-                    .exemple-display-grid{
+                    .exemple-display-grid {
                         display: grid;
                         gap: 0.5rem;
                         padding: 0.5rem;
@@ -744,50 +766,52 @@
                     }
 
                     @media screen and (min-width: 500px) {
+
                         /* small */
-                        .exemple-display-grid{
+                        .exemple-display-grid {
                             grid-template-columns: 1fr 1fr;
                         }
 
-                        .grid-col-sm-2{
+                        .grid-col-sm-2 {
                             grid-column: span 2;
                         }
                     }
 
                     @media screen and (min-width: 900px) {
+
                         /* md */
-                        .exemple-display-grid{
+                        .exemple-display-grid {
                             grid-template-columns: 1fr 1fr 1fr;
                         }
 
-                        .grid-col-md-2{
+                        .grid-col-md-2 {
                             grid-column: span 2;
                         }
-                        
-                        .grid-col-md-3{
+
+                        .grid-col-md-3 {
                             grid-column: span 3;
                         }
                     }
-                    
+
                     @media screen and (min-width: 1100px) {
+
                         /* lg */
-                        .exemple-display-grid{
+                        .exemple-display-grid {
                             grid-template-columns: 1fr 1fr 1fr 1fr;
                         }
 
-                        .grid-col-lg-2{
+                        .grid-col-lg-2 {
                             grid-column: span 2;
                         }
-                        
-                        .grid-col-lg-3{
+
+                        .grid-col-lg-3 {
                             grid-column: span 3;
                         }
-                        
-                        .grid-col-lg-4{
+
+                        .grid-col-lg-4 {
                             grid-column: span 4;
                         }
                     }
-
                 </style>
                 <div class="exemple-display-grid">
                     <div class="div-grid">
@@ -795,7 +819,8 @@
                             toto-01
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eveniet tenetur accusantium nisi aliquam dolorum aperiam beatae.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eveniet tenetur
+                            accusantium nisi aliquam dolorum aperiam beatae.
                         </p>
                     </div>
                     <div class="div-grid">toto-02</div>
@@ -807,6 +832,65 @@
                     <div class="div-grid">toto-08</div>
                     <div class="div-grid grid-col-lg-2">toto-09</div>
                     <div class="div-grid grid-col-md-3 grid-col-lg-2">toto-10</div>
+                </div>
+                <h5>grid-template-areas</h5>
+                <p>
+                    Référencer les colonnes et les lignes de la grille à des aires dans lequelles les éléments seront
+                    placés
+                </p>
+                <style>
+                    .exemple-areas,
+                    .exemple-areas>* {
+                        border: 1px solid black;
+                    }
+
+                    .exemple-areas {
+                        display: grid;
+                        grid-template-columns: 250px auto;
+                        grid-template-areas:
+                            'header-areas header-areas'
+                            'main-areas main-areas'
+                            'col-areas col-areas'
+                            'footer-areas footer-areas'
+                        ;
+                        margin-bottom: 1rem;
+                        row-gap: 0.5rem;
+                        column-gap: 0.5rem;
+                        padding: 0.5rem;
+                    }
+
+                    .header-areas {
+                        grid-area: header-areas;
+                    }
+
+                    .main-areas {
+                        grid-area: main-areas;
+                    }
+
+                    .col-areas {
+                        grid-area: col-areas;
+                    }
+
+                    .footer-areas {
+                        grid-area: footer-areas;
+                    }
+
+                    @media screen and (min-width: 1000px) {
+                        .exemple-areas {
+                            grid-template-areas:
+                                'header-areas header-areas'
+                                'col-areas main-areas'
+                                'footer-areas footer-areas'
+                            ;
+                        }
+                    }
+                </style>
+                <div class="exemple-areas">
+                    <div class="header-areas">Header</div>
+                    <div class="main-areas">Main</div>
+                    <div class="col-areas">Colonne</div>
+                    <div class="footer-areas">Footer</div>
+                </div>
             </article>
         </section>
     </main>
