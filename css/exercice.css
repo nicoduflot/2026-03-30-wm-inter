@@ -1,0 +1,88 @@
+/* 
+mise à 0 du CSS et mise en application des bases de l'accessibilité 
+
+- police sans empatement
+- police plus grande
+- hauteur de ligne plus grande
+- calcul de la taille des boîtes depuis l'extérieur des bordures
+
+*/
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.grid > header,
+.grid > nav,
+.grid > main,
+.grid > footer{
+    border: 1px solid black;
+}
+
+/* CSS général aplliqué partout et quand largeur d'affichage < 900px */
+
+.grid{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* préparer la grille avec des aires de modèle */
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-areas: 
+        'header header'
+        'nav nav'
+        'main main'
+        'footer footer'
+    ;
+}
+
+/* associer les éléments du site aux aires du modèle grille */
+
+.grid > header{
+    grid-area: header;
+}
+
+.grid > nav{
+    grid-area: nav;
+}
+
+.grid > main{
+    grid-area: main;
+}
+
+.grid > footer{
+    grid-area: footer;
+}
+
+/* CSS applliqué en surcharge dès qu'on atteint un affichage de 900px et plus */
+
+@media screen and (min-width: 900px) {
+    .grid{
+        width: 880px;
+        grid-template-areas: 
+            'header header'
+            'nav main'
+            'footer footer'
+        ;
+    }
+
+    .grid main section{
+
+    }
+
+    .grid main section article{
+        
+    }
+}
