@@ -399,3 +399,48 @@ body > footer{
         display: none;
     }
 }
+/* Tout ce qui est déclaré avant la media querie suivante concerne une largeur d'écran inférieur strictement à 576px */
+
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 576px) {
+    .container{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 720px;
+    }
+
+    .toc{
+        column-count: 2;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 1140px;
+    }
+
+    .toc{
+        column-count: 3;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container{
+        width: 1320px;
+    }
+}

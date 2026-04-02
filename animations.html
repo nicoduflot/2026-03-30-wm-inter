@@ -13,22 +13,26 @@
 
 <body>
     <header role="banner">
-        <div>
+        <div class="container">
             <span class="site-title">Formation HTML - CSS</span>
         </div>
     </header>
     <nav role="navigation">
-        <div>
+        <div class="container">
             <ul>
-                <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Accueil</a></li>
+                <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Accueil</a>
+                </li>
                 <li><a href="./media.html" title="Les media en HTML - CSS"><i class="bi bi-film"></i> Media</a></li>
-                <li><a href="./contact.html" title="Les formulaires en HTML - CSS"><i class="bi bi-envelope-open-fill"></i> Contact</a></li>
-                <li><a href="./animations.html" title="Les animations HTML - CSS"><i class="bi bi-person-walking"></i> Animations</a></li>
-                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
+                <li><a href="./contact.html" title="Les formulaires en HTML - CSS"><i
+                            class="bi bi-envelope-open-fill"></i> Contact</a></li>
+                <li><a href="./animations.html" title="Les animations HTML - CSS"><i class="bi bi-person-walking"></i>
+                        Animations</a></li>
+                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i>
+                        Bootstrap</a></li>
             </ul>
         </div>
     </nav>
-    <main>
+    <main class="container">
         <header>
             <h1>Les animations avec CSS</h1>
         </header>
@@ -36,17 +40,19 @@
             <p>
                 <span>Table des matières</span>
             </p>
-            <ul>
-                <li>
-                    <a href="#readymade">Les animations ready-made</a>
-                </li>
-                <li>
-                    <a href="#diy">Les animation D.I.Y.</a>
-                </li>
-                <li>
-                    <a href="#images-clefs">Les animation avec les images clefs</a>
-                </li>
-            </ul>
+            <nav>
+                <ul class="toc">
+                    <li>
+                        <a href="#readymade">Les animations ready-made</a>
+                    </li>
+                    <li>
+                        <a href="#diy">Les animation D.I.Y.</a>
+                    </li>
+                    <li>
+                        <a href="#images-clefs">Les animation avec les images clefs</a>
+                    </li>
+                </ul>
+            </nav>
         </aside>
         <section>
             <header>
@@ -55,11 +61,14 @@
             <section>
                 <article>
                     <header>
-                        <h3 id="readymade" class="animate__animated animate__bounce animate__infinite">Les animations "ready-made"</h3>
+                        <h3 id="readymade" class="animate__animated animate__bounce animate__infinite">Les animations
+                            "ready-made"</h3>
                     </header>
                     <h4 class="animate__animated animate__rubberBand">Animate CSS</h4>
                     <p>
-                        Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre précis.
+                        Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de
+                        récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre
+                        précis.
                     </p>
                     <p>
                         <a href="https://animate.style/" target="_blank">L'exemple précédent utilise animate.css</a>
@@ -76,11 +85,11 @@
                         /*  récupération de la cble de l'animation */
                         const pAnim = document.getElementById('animation-cible');
                         /* au clic sur le bouton, on déclenche une fonctionnalité */
-                        btnAnim.addEventListener('click', function(){
+                        btnAnim.addEventListener('click', function () {
                             /* on ajoute à la cible les classes pour l'animer */
                             pAnim.classList.add('animate__animated', 'animate__bounce', 'animate__repeat-1');
                             /* un élément animé nous indique quand son animation est finie */
-                            pAnim.addEventListener('animationend', function(){
+                            pAnim.addEventListener('animationend', function () {
                                 /* à la fin de l'animation, on retire les classes d'animation de l'élément */
                                 pAnim.classList.remove('animate__animated', 'animate__bounce', 'animate__repeat-1');
                             });
@@ -92,10 +101,12 @@
                         <h3 id="diy">Les animations D.I.Y.</h3>
                     </header>
                     <p class="translation">
-                        Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une transition, on programme la ou les animations et / ou transformations dans cette transition.
+                        Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une
+                        transition, on programme la ou les animations et / ou transformations dans cette transition.
                     </p>
                     <p class="scale-border">
-                        Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des transitions et / ou transformations.
+                        Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des
+                        transitions et / ou transformations.
                     </p>
                     <p>
                         on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
@@ -151,12 +162,11 @@
                         Pour des animations réussies, appelez-nous <i class="bi bi-telephone-fill clignoter"></i>
                     </p>
                 </article>
-                </article>
             </section>
         </section>
     </main>
     <footer>
-        <div>&copy; DAWAN - MARS 2026</div>
+        <div class="container">&copy; DAWAN - MARS 2026</div>
     </footer>
 </body>
 
