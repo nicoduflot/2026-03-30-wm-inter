@@ -18,11 +18,15 @@
     <nav role="navigation">
         <div>
             <ul>
-                <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Accueil</a></li>
+                <li><a href="./" title="Introduction au HTML - CSS"><i class="bi bi-house-door-fill"></i> Accueil</a>
+                </li>
                 <li><a href="./media.html" title="Les media en HTML - CSS"><i class="bi bi-film"></i> Media</a></li>
-                <li><a href="./contact.html" title="Les formulaires en HTML - CSS"><i class="bi bi-envelope-open-fill"></i> Contact</a></li>
-                <li><a href="./animations.html" title="Les animations HTML - CSS"><i class="bi bi-person-walking"></i> Animations</a></li>
-                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
+                <li><a href="./contact.html" title="Les formulaires en HTML - CSS"><i
+                            class="bi bi-envelope-open-fill"></i> Contact</a></li>
+                <li><a href="./animations.html" title="Les animations HTML - CSS"><i class="bi bi-person-walking"></i>
+                        Animations</a></li>
+                <li><a href="./bootstrap.html" title="Le framework CSS Bootstrap"><i class="bi bi-bootstrap-fill"></i>
+                        Bootstrap</a></li>
             </ul>
         </div>
     </nav>
@@ -480,30 +484,78 @@
                         On écrit le CSS en essayant d'appliquer le D.R.Y.
                         Don't Repeat Yourself
                         */
-                        .exemple-position{
+                        .exemple-position {
                             width: 200px;
                             height: 200px;
                             border-width: 3px;
                             border-style: solid;
                             border-color: black;
                         }
-                        .carre-ex{
+
+                        .carre-ex {
                             width: 50px;
                             height: 50px;
                         }
-                        .carre-vert{
+
+                        .carre-vert {
                             /* les positionnements top, left, right ou bottom ne fonctionnent que si l'élément a une position absolute, sticky, relative ou fixed */
-                            top : 10px;
-                            left : 10px;
+                            top: 10px;
+                            left: 10px;
                             background-color: darkgreen;
                         }
-                        .carre-rouge{
+
+                        .carre-rouge {
                             background-color: darkred;
                         }
                     </style>
                     <div class="exemple-position">
                         <div class="carre-ex carre-vert"></div>
                         <div class="carre-ex carre-rouge"></div>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section>
+            <header>
+                <h2 id="tips-css">Tips CSS</h2>
+            </header>
+            <section>
+                <article>
+                    <h3 id="svg">Scalable Vector Graphic</h3>
+                    <p>
+                        SVG : Scalable Vector Graphic
+                    </p>
+                    <p>
+                        Il est possible soit d'appeler un svg comme une image
+                    </p>
+                    <img src="./images/no-logo-2.svg" />
+                    <p>
+                        Un svg ne subit pas d'effet "flou" quand il est affiché plus grand que sa taille d'origine, car
+                        il
+                        s'agit en fait d'un fichier XML contenant un ensemble de balise à l'intérieur d'une balise
+                        <code>svg</code> qui définissent les formes, les couleurs de remplissage et de contour.
+                    </p>
+                    <p>
+                        Il est possible de les faire soi-même.
+                    </p>
+                    <svg width="100%" height="10">
+                        <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke: transparent; fill: darkred;" ></polyline>
+                    </svg>
+                    <p>
+                        Autre exemple :
+                    </p>
+                    <svg width="300" height="200">
+                        <rect width="100%" height="100%" fill="darkred" />
+                        <circle cx="100" cy="100" r="80" fill="darkgreen" />
+                        <circle cx="200" cy="100" r="80" fill="darkviolet" />
+                        <circle cx="150" cy="100" r="80" fill="black" />
+                        <text x="150" font-size="60px" y="120" text-anchor="middle" fill="white">Coucou</text>
+                    </svg>
+                </article>
+                <article>
+                    <h3 id="les-proprietes-du-beckground">Les propriétés background</h3>
+                    <div class="badge">
+                        
                     </div>
                 </article>
             </section>

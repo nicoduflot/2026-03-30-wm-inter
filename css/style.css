@@ -166,6 +166,7 @@ vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil
     --header-bg-color: #167698;
     --header-color: white;
     --header-link-color: #CF3E36;
+    --header-link-color-op-50: rgba(207, 62, 54, 0.5);
     --main-nav-bg-color: #167698;
     --main-nav-color: white;
     --main-nav-link-color: white;
@@ -313,6 +314,21 @@ figure.video{
     border-color: var(--dark-border-color);
     background-color: var(--dark-bg-color);
     color: var(--dark-color);
+}
+
+.badge{
+    width: 200px;
+    height: 200px;
+    margin: var(--gutter);
+    background: radial-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8)), 
+    url('../images/pip-boy-boy.png');
+    background-color: brown;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    border-radius: 50%;
+    border: 3px, solid cadetblue;
+    box-shadow: 0px 0px 10px 1px;
 }
 
 /* déclarations selon la structure de la page HTML */
