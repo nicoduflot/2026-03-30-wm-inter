@@ -79,10 +79,11 @@ body{
     }
 
     .grid main section{
-
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .grid main section article{
-        
+        width: 50%;
     }
 }

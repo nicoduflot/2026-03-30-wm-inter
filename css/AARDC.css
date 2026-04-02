@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'aardvark';
+    src: url('fonts/AARDC.eot');
+    src: url('fonts/AARDC.eot') format('embedded-opentype'),
+         url('fonts/AARDC.woff2') format('woff2'),
+         url('fonts/AARDC.woff') format('woff'),
+         url('fonts/AARDC.ttf') format('truetype'),
+         url('fonts/AARDC.svg#AARDC') format('svg');
+}
