@@ -384,3 +384,18 @@ body > footer{
     background-color: var(--main-nav-bg-color);
     color: var(--header-color);
 }
+
+/* media queries */
+
+@media print{
+    
+    @page{
+        size: A4;
+        padding: 2cm 1.5cm;
+    }
+
+    body > nav,
+    body > footer{
+        display: none;
+    }
+}

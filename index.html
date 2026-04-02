@@ -539,7 +539,8 @@
                         Il est possible de les faire soi-même.
                     </p>
                     <svg width="100%" height="10">
-                        <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke: transparent; fill: darkred;" ></polyline>
+                        <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke: transparent; fill: darkred;">
+                        </polyline>
                     </svg>
                     <p>
                         Autre exemple :
@@ -555,10 +556,258 @@
                 <article>
                     <h3 id="les-proprietes-du-beckground">Les propriétés background</h3>
                     <div class="badge">
-                        
+
                     </div>
                 </article>
             </section>
+        </section>
+        <section>
+            <header>
+                <h2 id="web-adaptatif">Le CSS adaptatif</h2>
+            </header>
+            <article>
+                <h3>Principe de l'adaptatif</h3>
+                <p>
+                    Le CSS dit adaptatif (ou plus communément appelé RWD - Responsive Web Design) permet d'adapter
+                    l'affichage d'un site sur selon l'appareil utilisé.
+                </p>
+                <p>
+                    Donc, un site s'affichant correctement sur smartphone (en prenant en compte la lisibilité et
+                    l'accessibilité) doit pouvoir s'adapter sous une forme différente sur des écrans plus grands
+                    (tablette ou PC)
+                </p>
+                <p>
+                    Pour ce faire, on va écrire dans le CSS des surcharges ou des nouvelles règles CSS quand la largeur
+                    de l'écran atteint ou dépasse une largeur définie, en utilisant les <code>media queries</code>
+                </p>
+                <h3>Les media-queries</h3>
+                <p>
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                    autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation
+                    (portrait ou paysage), etc.
+                </p>
+                <p>
+                    Il est recommandé d'écrire le CSS d'un site en smartphone-first. La plupart des visiteurs de site
+                    naviguent à l'aide d'un smartphone. De plus le CSS de base sans media-queries est déstiné uniquement
+                    à l'affichage sur smartphone. Cela permet d'écrire quasiement tout le CSS d'un site, les surcharges
+                    ou ajouts de CSS dans les media-queries ne représentant qu'une partie infime du fichier CSS total.
+                </p>
+                <p>
+                    Si on fait la mise en page en premier lieu pour un écran plus grand, les réécriture et surcharge de
+                    CSS seront beaucoup plus importante, ce qui génèrera un fichier CSS très gros et surtout très
+                    difficile à maintenir.
+                </p>
+                <h3>la propriété display</h3>
+                <p>
+                    La propriété display permet de contrôler le mode d'affichage d'un élément sur la page et parfois
+                    même au sein d'un "flux" de texte, généralement dans un paragraphe.
+                </p>
+                <p>
+                    Les valeurs possibles (liste non exhaustive) :
+                </p>
+                <ul>
+                    <li>block : l'élément prend toute la largeur disponible et "repousse" les éléments (ou le flux dee
+                        données) au dessus (pour ce qui arrive avant) et en dessous (pour ce qui arrive après)</li>
+                    <li>inline : l'élément prend la largeur de son contenur et est intégré ans le flux de texte à la
+                        suite</li>
+                    <li>inline-block : completement semblable au inline, mais généralement utilisé sur des éléments
+                        ayant la proriété float d'activée, afin de les aligner côte à côte</li>
+                    <li>None : l'élément n'est tout simplement pas affiché à l'écran</li>
+                    <li>flex : permet d'utiliser les propriétés flexible CSS (principalement utilisées pour le CSS
+                        adaptatif) MAIS pour les élément &Agrave; l'intérieur</li>
+                    <li>grid : permet de configurer une disposition en grille, en configurant le nombre et l'espace pris
+                        par les colonne, la gestion automatique ou forcée des lignes, et l'espace a prévoir entre les
+                        éléments</li>
+                </ul>
+                <h4><code>float</code></h4>
+                <div style="border: 1px solid black;padding: 0.25rem;">
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 130px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="border: 1px solid black; padding: 0.25rem;width: 100px;float: left;display: inline-block; height: 50px;">Toto</div>
+                    <div style="clear: both;"></div>
+                </div>
+                <img src="./images/doc-signal-200w.png" style="float: left;margin: 0.5rem 0.5rem 0.5rem 0;" />
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum voluptatibus quam consequuntur impedit
+                    id recusandae est dolor debitis quibusdam atque minima harum maiores autem perspiciatis, numquam quo
+                    nulla, voluptas tenetur!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque voluptates, mollitia quod dolor illo
+                    voluptatem non nisi rerum et minus consequatur tempore cumque exercitationem amet quis a expedita in
+                    necessitatibus?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, eos nesciunt? Officia aliquid,
+                    consequatur possimus, id a, quibusdam consectetur molestias voluptatem nemo accusamus ea error modi
+                    perferendis illo autem atque.
+                </p>
+                <div style="clear: both;"></div>
+                <h4>Display block, inline, inline-block dans un flux</h4>
+                <p>
+                    Lorem ipsum dolor <span style="display: inline;color: blue;" title="display: inline">sit amet</span> consectetur adipisicing elit. <span style="display: block;color: green;" title="display: block">Tempore</span> modi beatae, rem placeat excepturi hic explicabo ad aliquam dolores adipisci inventore dolore <span style="display: inline-block;color: red;" title="display: inline-block">voluptate</span> odit delectus velit ex itaque eum optio.
+                </p>
+                <h4>Display : flex</h4>
+                <style>
+                    /* phone */
+                    .exemple-display-flex,
+                    .div-flex{
+                        border: 1px solid black;
+                    }
+
+                    .exemple-display-flex{
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
+                        --gap-display-flex: 0.5rem;
+                        padding-bottom: var(--gap-display-flex);
+                        padding-left: var(--gap-display-flex);
+                    }
+                    
+                    .div-flex{
+                        width: 100%;
+                        margin-top: var(--gap-display-flex);
+                        margin-right: var(--gap-display-flex);
+                    }
+
+                    @media screen and (min-width: 500px) {
+                        /* small */
+                        .div-flex{
+                            width: calc( 50% - var(--gap-display-flex) );
+                        }
+                    }
+
+                    @media screen and (min-width: 900px) {
+                        /* md */
+                        .div-flex{
+                            width: calc( (100% / 3) - var(--gap-display-flex));
+                        }
+                        
+                        .flex-col-md-2{
+                            width: calc( ((100% / 3) * 2) - var(--gap-display-flex));
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1100px) {
+                        /* lg */
+                        .div-flex{
+                            width: calc( (100% / 4) - var(--gap-display-flex));
+                        }
+
+                        .flex-col-md-2, 
+                        .flex-col-lg-2{
+                            width: calc( ((100% / 4) * 2) - var(--gap-display-flex));
+                        }
+
+                    }
+                </style>
+                <div class="exemple-display-flex">
+                    <div class="div-flex">
+                        <p>
+                            toto-01
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium nulla explicabo optio deserunt sapiente.
+                        </p>
+                    </div>
+                    <div class="div-flex flex-col-md-2">toto-02</div>
+                    <div class="div-flex flex-col-md-2">toto-03</div>
+                    <div class="div-flex">toto-04</div>
+                    <div class="div-flex">toto-05</div>
+                    <div class="div-flex">toto-06</div>
+                    <div class="div-flex">toto-07</div>
+                    <div class="div-flex">toto-08</div>
+                    <div class="div-flex">toto-09</div>
+                    <div class="div-flex flex-col-lg-2">toto-10</div>
+                    <div class="div-flex">toto-11</div>
+                    <div class="div-flex">toto-12</div>
+                    <div class="div-flex">toto-13</div>
+                    <div class="div-flex">toto-14</div>
+                </div>
+                <h4>Display : grid</h4>
+                <img class="img-fluid" src="./support/005-grille-ligne-colonnes-aires.png" />
+                <style>
+                    .exemple-display-grid,
+                    .div-grid{
+                        border: 1px solid black;
+                    }
+
+                    .exemple-display-grid{
+                        display: grid;
+                        gap: 0.5rem;
+                        padding: 0.5rem;
+                        grid-template-columns: 1fr;
+                    }
+
+                    @media screen and (min-width: 500px) {
+                        /* small */
+                        .exemple-display-grid{
+                            grid-template-columns: 1fr 1fr;
+                        }
+
+                        .grid-col-sm-2{
+                            grid-column: span 2;
+                        }
+                    }
+
+                    @media screen and (min-width: 900px) {
+                        /* md */
+                        .exemple-display-grid{
+                            grid-template-columns: 1fr 1fr 1fr;
+                        }
+
+                        .grid-col-md-2{
+                            grid-column: span 2;
+                        }
+                        
+                        .grid-col-md-3{
+                            grid-column: span 3;
+                        }
+                    }
+                    
+                    @media screen and (min-width: 1100px) {
+                        /* lg */
+                        .exemple-display-grid{
+                            grid-template-columns: 1fr 1fr 1fr 1fr;
+                        }
+
+                        .grid-col-lg-2{
+                            grid-column: span 2;
+                        }
+                        
+                        .grid-col-lg-3{
+                            grid-column: span 3;
+                        }
+                        
+                        .grid-col-lg-4{
+                            grid-column: span 4;
+                        }
+                    }
+
+                </style>
+                <div class="exemple-display-grid">
+                    <div class="div-grid">
+                        <p>
+                            toto-01
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda eveniet tenetur accusantium nisi aliquam dolorum aperiam beatae.
+                        </p>
+                    </div>
+                    <div class="div-grid">toto-02</div>
+                    <div class="div-grid">toto-03</div>
+                    <div class="div-grid">toto-04</div>
+                    <div class="div-grid">toto-05</div>
+                    <div class="div-grid">toto-06</div>
+                    <div class="div-grid">toto-07</div>
+                    <div class="div-grid">toto-08</div>
+                    <div class="div-grid grid-col-lg-2">toto-09</div>
+                    <div class="div-grid grid-col-md-3 grid-col-lg-2">toto-10</div>
+            </article>
         </section>
     </main>
     <footer>
