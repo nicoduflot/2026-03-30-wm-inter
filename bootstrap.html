@@ -41,7 +41,8 @@
                         </li>
                     -->
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="./bootstrap.html"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a>
+                        <a class="nav-link active" aria-current="page" href="./bootstrap.html"><i
+                                class="bi bi-bootstrap-fill"></i> Bootstrap</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -49,10 +50,13 @@
                             Autres pages
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./"><i class="bi bi-house-door-fill"></i> Accueil</a></li>
+                            <li><a class="dropdown-item" href="./"><i class="bi bi-house-door-fill"></i> Accueil</a>
+                            </li>
                             <li><a class="dropdown-item" href="./media.html"><i class="bi bi-film"></i> Media</a></li>
-                            <li><a class="dropdown-item" href="./contact.html"><i class="bi bi-envelope-open-fill"></i> Contact</a></li>
-                            <li><a class="dropdown-item" href="./animations.html"><i class="bi bi-person-walking"></i> Animations</a></li>
+                            <li><a class="dropdown-item" href="./contact.html"><i class="bi bi-envelope-open-fill"></i>
+                                    Contact</a></li>
+                            <li><a class="dropdown-item" href="./animations.html"><i class="bi bi-person-walking"></i>
+                                    Animations</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
@@ -73,7 +77,114 @@
         </div>
     </nav>
     <main class="container">
+        <section class="row my-1">
+            <header>
+                <h2 id="bases-en-html">Bases en HTML</h2>
+            </header>
+            <header>
+                <h3 id="balises-de-contenu-de-texte">Balises de contenu de texte</h3>
+            </header>
+            <div class="col-md-6 col-lg-4 my-2">
+                <article>
 
+                    <h4>Les paragraphes</h4>
+                    <p>
+                        Les paragraphes séparent les blocs de texte sur la verticale,mais on a parfois besoin d'un
+                        retour chariot au sein d'un paragraphe : <br />
+                        Le paragraphe s'écrit avec la balise <code>&lt;p&gt;</code>. <br />
+                        Le retour chariot se fait avec <code>&lt;br /&gt;</code>
+                    </p>
+                    <h5>Exemple pragraphe et retour chariot</h5>
+                    <p>
+                        Mon petit garçon
+                    </p>
+                    <p>
+                        n'est pas à l'école<br /> donc je dois télétravailler
+                    </p>
+                    <p>
+                        Les paragraphes possèdent en haut et en bas des marge extérieures, de qui permet qu'il ne soient
+                        pas collé verticalement.
+                    </p>
+                    <p>
+                        Comme se sont des marge extérieure, elles se chevauches quand elles se suivent.
+                    </p>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4 my-2">
+                <article>
+                    <h4>Les liste non-ordonnée</h4>
+                    <h5>Les listes à un niveau</h5>
+                    <ul>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ul>
+                    <h5>Listes à plusieurs niveaux</h5>
+                    <ul>
+                        <li>Élément de liste</li>
+                        <li>
+                            Élément de liste
+                            <ul>
+                                <li>Élément de sous-liste</li>
+                                <li>
+                                    Élément de sous-liste
+                                    <ul>
+                                        <li>Élément de sous-sous-liste</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="col-md-6 col-lg-4 my-2">
+                <article>
+                    <h4>Listes ordonnées</h4>
+                    <h5>Les listes à un niveau</h5>
+                    <ol>
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <ol type="I">
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <ol type="a">
+                        <li>Élément de liste</li>
+                        <li>Élément de liste</li>
+                    </ol>
+                    <h5>Listes à plusieurs niveaux</h5>
+                    <ol>
+                        <li>Élément de liste</li>
+                        <li>
+                            Élément de liste
+                            <ol type="A">
+                                <li>Élément de sous-liste</li>
+                                <li>
+                                    Élément de sous-liste
+                                    <ol type="i">
+                                        <li>Élément de sous-sous-liste</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <p>
+                        Si vous avez besoin d'interrompre l'affichage d'une liste pour intervenir, et que vous devez
+                        reprendre cette liste à la numlérotation :
+                    </p>
+                    <ol start="5">
+                        <li>Élément de liste</li>
+                    </ol>
+                    <p>
+                        Il est aussi possible d'afficher la numérotation à rebours avec l'attribut reversed
+                    </p>
+                </article>
+            </div>
+        </section>
     </main>
     <footer class="bg-dark text-white" data-bs-theme="dark">
         <div class="container text-center">
