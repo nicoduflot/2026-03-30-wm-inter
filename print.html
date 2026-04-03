@@ -1,53 +1,236 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/print.css" />
 </head>
+
 <body>
     <main class="book">
         <div class="page page-1">
+            <h1>
+                Mécréants !
+            </h1>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                Mécréants est une règle d’escarmouche rapide nécessitant seulement quelques figurines et deux dés à six
+                faces par joueur. Les joueurs forment des bandes de personnages s’affrontant pour diverses raisons dans
+                une ambiance médiévale-fantastique.
+            </p>
+            <h2>Création des personnages</h2>
+            <h3>
+                Caractéristiques et matériel
+            </h3>
+            <p>
+                Chaque figurine représente un personnage, défini par trois caractéristiques, ses armes et son armure.
+            </p>
+            <h4>
+                Qualité (Q)
+            </h4>
+            <p>
+                Représente la qualité du personnage au combat, que ce soit au tir ou en corps à corps.<br />
+                Un personnage possède une Qualité comprise entre 2 [Débutant - Bleu - Apprenti] et 5 [Expert - Vétéran -
+                Dur à cuire]
+            </p>
+            <h4>
+                Force (F)
+            </h4>
+            <p>
+                Représente la force, le cran et la vitalité d'un personnage.<br />
+                Un personnage possède une Force comprise entre 2 [Faible - Fragile] et 5 [Balaise - Charpenté]
             </p>
         </div>
         <div class="page page-2">
+            <h4>
+                Points de vie (PV)
+            </h4>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                Représente le nombre de blessures qu'un personnage peut subir avant d'être considéré « Hors de combat
+                ».<br />
+                Le nombre de PV est égal à la Force en début de partie.
             </p>
+            <h3>
+                Coût des personnages
+            </h3>
+            <p>
+                Chaque personnage à un coût de base, auquel on ajoute le coût des armes, de l'équipement et de
+                l'armure.<br />
+                <b>Calcul du coût de base</b><br />
+                <i>Coût d'un personnage = (F + Q) x 10</i>
+            </p>
+            <p>
+                Exemple : Un fantassin nommé Grigor possède une Force de 4 et une qualité de 3. Un chevalier nomme Sir
+                Valoric possède une force de 5 et une qualité de 5.
+            </p>
+            <ul>
+                <li>Grigor: (4 + 3) x 10 = 70 pts</li>
+                <li>Sir Valoric: (5 + 5) x 10 = 100 pts</li>
+            </ul>
+            <h2>
+                Règles de base
+            </h2>
+            <ul>
+                <li>Les jets sont faits à l'aide de deux dés à 6 faces, dont on ajoute le résultat.</li>
+                <li>Si le résultat est strictement supérieur au seuil fixé par les règles, l'action est réussie.</li>
+            </ul>
         </div>
         <div class="page page-3">
+            <h3>
+                Phases de jeu
+            </h3>
+            <h4>
+                Tactique (Initiative) :
+            </h4>
+            <ul>
+                <li>Chaque joueur lance 1d6, le score le plus haut commencera le tour.</li>
+                <li>Il y a une relance en cas d'égalité.</li>
+            </ul>
+            <h4>
+                Activations :
+            </h4>
+            <ul>
+                <li>Les joueurs activent un personnage à tour de rôle.</li>
+                <li>Quand un personnage est activé, il peut :
+                    <ul>
+                        <li>Se déplacer et tirer,</li>
+                        <li>Tirer puis se déplacer, ou</li>
+                        <li>Charger pour aller au corps à corps.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>
+                Mouvement : 
+            </h4>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                Les distances ne sont pas mesurées à l'avance, les joueurs doivent estimer les distances de mouvement, spécialement pour les charges.<br />
+                Pour pouvoir utiliser n'importe quelle échelle de figurine, on compte les distances en Pas<br />
+                Par exemple :
             </p>
+            <table>
+                <tr>
+                    <th>Echelle</th>
+                    <th>Pas en cm</th>
+                </tr>
+                <tr>
+                    <td>10 mm</td>
+                    <td>1 cm</td>
+                </tr>
+                <tr>
+                    <td>15 - 20 mm</td>
+                    <td>2 cm</td>
+                </tr>
+                <tr>
+                    <td>25 - 38 mm</td>
+                    <td>2.54cm (un pouce anglais)</td>
+                </tr>
+            </table>
         </div>
         <div class="page page-4">
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                La distance de mouvement est basée sur la Force :
+            </p>
+            <table>
+                <tr>
+                    <th>Force</th>
+                    <th>Mouvement</th>
+                </tr>
+                <tr>
+                    <td>2 - 5</td>
+                    <td>4 Pas</td>
+                </tr>
+                <tr>
+                    <td>4 - 5</td>
+                    <td>6 Pas</td>
+                </tr>
+            </table>
+            <h5>Types de mouvement</h5>
+            <ul>
+                <li>Marcher : Tout le mouvement normal du personnage.</li>
+                <li>Sprint : le mouvement du personnage x 1.5, mais ne peut faire aucune action après.</li>
+                <li>Charge : Tentative d'atteindre un personnage ennemi pour l'engager au corps à corps.
+                    <ul>
+                        <li>Avant la charge, le joueur estime la distance entre le personnage qui charge et la cible.</li>
+                        <li>Après avoir déclaré la charge, on mesure la distance :
+                            <ul>
+                                <li>Si le personnage atteint la cible → il l'engage au corps à corps.</li>
+                                <li>Si la distance est trop courte → la charge est ratée et cela compte</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>
+                Tir
+            </h4>
+            <p>
+                Défense de base : 5 pour chaque personnage.
             </p>
         </div>
         <div class="page page-5">
+            <h5>
+                Couvert (bonus contre le tir) :
+            </h5>
+            <ul>
+                <li>Couvert léger: +1</li>
+                <li>Couvert lourd: +2 (ou plus, selon le terrain et l'accord entre les joueurs)</li>
+            </ul>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                Un seul bonus de couvert s’applique, choisi selon la situation.
+            </p>
+            <h5>
+                Portée (bonus contre le tir) :
+            </h5>
+            <ul>
+                <li>Portée moyenne : +1</li>
+                <li>Portée longue : +2</li>
+            </ul>
+            <h5>
+                Armure (bonus contre les blessures) :
+            </h5>
+            <p>
+                Les armures rendent les personnage plus difficiles a blesser, en tir comme au corps à corps, ce qui les rend précieuses.
+            </p>
+            <ul>
+                <li>Armure légère : +1 (+10 pts)</li>
+                <li>Armure lourde : +2 (+ 20 pts)</li>
+            </ul>
+            <p>
+                <b>Calcul de la Défense au tir :</b><br />
+                Défense au tir = 5 (Base) + Bonus de couvert + Bonus de Portée<br />
+                Exemple : Un personnage avec un couvert léger àportée moyenne = 5 + 1 + 1 = 7.<br />
+                l’armure ne s’applique qu’au jet de blessure, pas à la défense au tir
             </p>
         </div>
         <div class="page page-6">
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                6
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore
+                facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
             </p>
         </div>
         <div class="page page-7">
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                7
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore
+                facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
             </p>
         </div>
         <div class="page page-8">
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
+                8
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod porro beatae odio eos, perferendis labore
+                facere neque pariatur aut odit? Dolor eaque ipsam ea vitae eos incidunt dolorem voluptatem distinctio.
             </p>
         </div>
     </main>
 </body>
+
 </html>

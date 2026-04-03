@@ -11,91 +11,132 @@
 </head>
 
 <body>
-    <header>
-        <h1>Exo Bootstrap</h1>
+    <header class="bg-dark text-white py-1" data-bs-theme="dark">
+        <div class="container">
+            <h1>Exo Bootstrap</h1>
+        </div>
     </header>
-    <nav>
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="./bootstrap.html">Retour bootstrap</a></li>
-            <li><a href="./index.html">Accueil formation</a></li>
-        </ul>
+    <nav class="bg-dark text-white" data-bs-theme="dark">
+        <div class="container">
+            <h2>Navigation</h2>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link" href="./bootstrap.html">Retour bootstrap</a></li>
+                <li class="nav-item"><a class="nav-link" href="./index.html">Accueil formation</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
-        <section>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, optio suscipit. Animi, iste. Excepturi corrupti iste laborum sint, dolor totam possimus suscipit ratione cumque vel, ea eum repellat eius quia.
-                </p>
-                <figure>
-                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" />
-                </figure>
+    <main class="container">
+        <section class="row">
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col-7">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, optio suscipit. Animi, iste. Excepturi corrupti iste laborum sint, dolor totam possimus suscipit ratione cumque vel, ea eum repellat eius quia.
+                        </p>
+                        <figure class="col-5">
+                            <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore facilis qui rerum dignissimos. Laboriosam natus sed aut consectetur corporis explicabo similique aperiam cumque aliquam facilis eos earum, iusto incidunt alias.
-                </p>
-                <figure>
-                    <img src="./images/multi-vignettes-sm-01.png" />
-                </figure>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore facilis qui rerum dignissimos. Laboriosam natus sed aut consectetur corporis explicabo similique aperiam cumque aliquam facilis eos earum, iusto incidunt alias.
+                        </p>
+                        <figure class="col">
+                            <img src="./images/multi-vignettes-sm-01.png" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quaerat voluptatibus facilis nemo fugit voluptas sed, dignissimos maxime atque, amet dolore unde blanditiis eaque nostrum saepe veniam facere eius! Magni?
-                </p>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quaerat voluptatibus facilis nemo fugit voluptas sed, dignissimos maxime atque, amet dolore unde blanditiis eaque nostrum saepe veniam facere eius! Magni?
+                        </p>
+                        <figure class="col">
+                            <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, error perferendis sapiente repellendus cumque porro nesciunt ea illum quibusdam dolorem quo, architecto, odio eius ut tenetur recusandae cum reprehenderit vel.
-                </p>
-                <figure>
-                    <img src="./images/rentree_sco_24_25-990x500.jpg" />
-                </figure>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, error perferendis sapiente repellendus cumque porro nesciunt ea illum quibusdam dolorem quo, architecto, odio eius ut tenetur recusandae cum reprehenderit vel.
+                        </p>
+                        <figure class="col">
+                            <img src="./images/rentree_sco_24_25-990x500.jpg" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quisquam quos eius! Magni suscipit commodi officia veritatis? Nisi eveniet delectus maiores maxime ex sed ab? Delectus similique odit consequatur cumque.
-                </p>
-                <figure>
-                    <img src="./images/fan_made_megaman_8_bit_spritesheet__old__by_johncartoonist04_de34zsp-fullview.png" />
-                </figure>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quisquam quos eius! Magni suscipit commodi officia veritatis? Nisi eveniet delectus maiores maxime ex sed ab? Delectus similique odit consequatur cumque.
+                        </p>
+                        <figure class="col">
+                            <img src="./images/fan_made_megaman_8_bit_spritesheet__old__by_johncartoonist04_de34zsp-fullview.png" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam rem eaque hic dolores nulla quae beatae amet facilis, quam ut tenetur saepe, magni vitae impedit reprehenderit at error doloremque consectetur.
-                </p>
-                <figure>
-                    <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" />
-                </figure>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam rem eaque hic dolores nulla quae beatae amet facilis, quam ut tenetur saepe, magni vitae impedit reprehenderit at error doloremque consectetur.
+                        </p>
+                        <figure class="col">
+                            <img src="./images/synthwave-vibe-james-white-signalnoise.jpg" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae molestias autem ad. Vero, amet reiciendis. Repellendus, veritatis. Libero iure ratione nesciunt ad non id veniam nihil asperiores, dolores quis repellendus?
-                </p>
-                <figure>
-                    <img src="./images/rentree_sco_24_25-990x500.jpg" />
-                </figure>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae molestias autem ad. Vero, amet reiciendis. Repellendus, veritatis. Libero iure ratione nesciunt ad non id veniam nihil asperiores, dolores quis repellendus?
+                        </p>
+                        <figure class="col">
+                            <img src="./images/rentree_sco_24_25-990x500.jpg" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
-            <article>
-                <h2>Article</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error neque ad porro tempore. Blanditiis consequuntur porro fugit enim id maiores molestias eligendi atque inventore dolorum ipsam, illo necessitatibus, laborum cum?
-                </p>
-                <figure>
-                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" />
-                </figure>
+            <article class="col-md-6 col-xl-4 my-2">
+                <div class="card">
+                    <div class="row card-body">
+                        <h2>Article</h2>
+                        <p class="col">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error neque ad porro tempore. Blanditiis consequuntur porro fugit enim id maiores molestias eligendi atque inventore dolorum ipsam, illo necessitatibus, laborum cum?
+                        </p>
+                        <figure class="col">
+                            <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" width="100" height="100" class="object-fit-cover rounded float-end" />
+                        </figure>
+                    </div>
+                </div>
             </article>
         </section>
     </main>
-    <footer>
-        <h2>Footer</h2>
+    <footer class="bg-dark text-white py-1" data-bs-theme="dark">
+        <div class="container">
+            <h2>Footer</h2>
+        </div>
     </footer>
 </body>
 
