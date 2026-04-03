@@ -43,3 +43,12 @@ Fichier de surcharge CSS de la page bootstrap.html, les classes créées ici ser
 .playlist-item:hover {
     background-color: #f8f9fa;
 }
+
+
+[data-content]{
+    display: none;
+}
+
+.nav-active{
+    display: block;
+}

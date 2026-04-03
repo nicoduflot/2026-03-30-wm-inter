@@ -443,6 +443,83 @@
                     </figure>
                 </article>
             </div>
+            <div>
+                <article>
+                    <ul class="nav nav-tabs" id="custom-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#"
+                                data-target="newsletter">Newsletter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-target="video">Vidéo du moment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-target="thoughs">Dernières pensées</a>
+                        </li>
+                    </ul>
+                    <div class="nav-active my-2" data-content="newsletter">
+                        <h3>Terry Pratchett</h3>
+                            <p>
+                                Sir Terence David John Pratchett (28 April 1948 – 12 March 2015) was an English author, humorist, and satirist, best known for the Discworld series of 41 comic fantasy novels published between 1983 and 2015, and for the apocalyptic comedy novel Good Omens (1990), which he co-wrote with Neil Gaiman.
+                            </p>
+                            <p>
+                                Pratchett's first novel, The Carpet People, was published in 1971. The first Discworld novel, The Colour of Magic, was published in 1983, after which Pratchett wrote an average of two books a year. The final Discworld novel, The Shepherd's Crown, was published in August 2015, five months after his death.
+                            </p>
+                            <p>
+                                With more than 100 million books sold worldwide in 43 languages, Pratchett was the UK's best-selling author of the 1990s. He was appointed an Officer of the Order of the British Empire (OBE) in 1998 and was knighted for services to literature in the 2009 New Year Honours. In 2001, he won the annual Carnegie Medal for The Amazing Maurice and His Educated Rodents, the first Discworld book marketed for children. He received the World Fantasy Award for Life Achievement in 2010.
+                            </p>
+                            <p>
+                                In December 2007 Pratchett announced that he had been diagnosed with early-onset Alzheimer's disease. He later made a substantial public donation to the Alzheimer's Research Trust (now Alzheimer's Research UK, ARUK), filmed three television programmes chronicling his experiences with the condition for the BBC, and became a patron of ARUK. Pratchett died on 12 March 2015, at the age of 66.
+                            </p>
+                    </div>
+                    <div data-content="video">
+                        <h3>Career</h3>
+                            <p>
+                                Sir Terence David John Pratchett (28 April 1948 – 12 March 2015) was an English author, humorist, and satirist, best known for the Discworld series of 41 comic fantasy novels published between 1983 and 2015, and for the apocalyptic comedy novel Good Omens (1990), which he co-wrote with Neil Gaiman.
+                            </p>
+                            <p>
+                                Pratchett's first novel, The Carpet People, was published in 1971. The first Discworld novel, The Colour of Magic, was published in 1983, after which Pratchett wrote an average of two books a year. The final Discworld novel, The Shepherd's Crown, was published in August 2015, five months after his death.
+                            </p>
+                            <p>
+                                With more than 100 million books sold worldwide in 43 languages, Pratchett was the UK's best-selling author of the 1990s. He was appointed an Officer of the Order of the British Empire (OBE) in 1998 and was knighted for services to literature in the 2009 New Year Honours. In 2001, he won the annual Carnegie Medal for The Amazing Maurice and His Educated Rodents, the first Discworld book marketed for children. He received the World Fantasy Award for Life Achievement in 2010.
+                            </p>
+                            <p>
+                                In December 2007 Pratchett announced that he had been diagnosed with early-onset Alzheimer's disease. He later made a substantial public donation to the Alzheimer's Research Trust (now Alzheimer's Research UK, ARUK), filmed three television programmes chronicling his experiences with the condition for the BBC, and became a patron of ARUK. Pratchett died on 12 March 2015, at the age of 66.
+                            </p>
+                    </div>
+                    <div data-content="thoughs">
+                        <h3>Livres</h3>
+                            <p>
+                                Sir Terence David John Pratchett (28 April 1948 – 12 March 2015) was an English author, humorist, and satirist, best known for the Discworld series of 41 comic fantasy novels published between 1983 and 2015, and for the apocalyptic comedy novel Good Omens (1990), which he co-wrote with Neil Gaiman.
+                            </p>
+                            <p>
+                                Pratchett's first novel, The Carpet People, was published in 1971. The first Discworld novel, The Colour of Magic, was published in 1983, after which Pratchett wrote an average of two books a year. The final Discworld novel, The Shepherd's Crown, was published in August 2015, five months after his death.
+                            </p>
+                            <p>
+                                With more than 100 million books sold worldwide in 43 languages, Pratchett was the UK's best-selling author of the 1990s. He was appointed an Officer of the Order of the British Empire (OBE) in 1998 and was knighted for services to literature in the 2009 New Year Honours. In 2001, he won the annual Carnegie Medal for The Amazing Maurice and His Educated Rodents, the first Discworld book marketed for children. He received the World Fantasy Award for Life Achievement in 2010.
+                            </p>
+                            <p>
+                                In December 2007 Pratchett announced that he had been diagnosed with early-onset Alzheimer's disease. He later made a substantial public donation to the Alzheimer's Research Trust (now Alzheimer's Research UK, ARUK), filmed three television programmes chronicling his experiences with the condition for the BBC, and became a patron of ARUK. Pratchett died on 12 March 2015, at the age of 66.
+                            </p>
+                    </div>
+                    <script>
+                        const custmNavLinks = document.querySelectorAll('#custom-nav a');
+                        custmNavLinks.forEach(element => {
+                            element.addEventListener('click', event => {
+                                event.preventDefault();
+                                custmNavLinks.forEach(link => {
+                                    link.classList.remove('active');
+                                })
+                                element.classList.add('active');
+                                document.querySelectorAll('[data-content]').forEach(content => {
+                                    content.classList.remove('nav-active');
+                                });
+                                document.querySelector(`[data-content="${element.dataset.target}"]`).classList.add('nav-active');
+                            });
+                        });
+                    </script>
+                </article>
+            </div>
         </section>
     </main>
     <footer class="bg-dark text-white" data-bs-theme="dark">
